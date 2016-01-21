@@ -1,0 +1,325 @@
+1. Please provide a program to output a N*N square spiral matrix, 
+from inner to outer anticlockwise as below. [Gets the number 
+N (N from 4 to 10) input from keyboard, and prints matrix on 
+screen ,10 scores]
+17   16   15  14    13
+
+18   5    4    3   12  
+
+19   6    1    2   11
+
+20   7    8    9   10
+
+21   22   23  24    25
+
+2. Please give the output of the following program, and explain the reasons. [ 10 scores, 5 points on each]
+
+#include <stdio.h>
+
+#define container_of(ptr, type, member) ({	 /
+	 const typeof( ((type *)0)->member ) *__mptr = (ptr);	 /
+	 (type *)( (char *)__mptr - offsetof(type,member) );})
+
+#define offsetof(type, member) ((size_t) &((type *)0)->member)
+
+struct cona_t {
+	 int i;
+	char t[10];
+	unsigned short xy;
+};
+
+
+int main(int argc, char *argv[])
+{
+     struct cona_t *p;
+     struct cona_t ct;
+
+     memset(&ct, 0, sizeof (struct cona_t));
+
+     ct.i = 10;
+     sprintf(ct.t, "%s", "zeng");
+     ct.xy = 20;
+
+     p = container_of(&ct.xy, struct cona_t, xy);
+
+     printf("%s\n", p->t);
+     return 0;
+}
+
+3. Point out the correct statement which correctly free the memory pointed to by 's' and 'p' in the following program? [10 scores]
+#include<stdio.h>
+
+#include<stdlib.h>
+
+
+
+int main()
+
+{
+
+    struct ex
+
+    {
+
+        int i;
+
+        float j;
+
+        char *s
+
+    };
+
+    struct ex *p;
+
+    p = (struct ex *)malloc(sizeof(struct ex));
+
+    p->s = (char*)malloc(20);
+
+    return 0;
+
+}
+
+A. free(p); , free(p->s);
+B. free(p->s); , free(p);
+C. free(p->s);
+D. free(p);
+
+4. Please point out the error in the following program. [10 scores]
+#include<stdio.h>
+
+#include<stdarg.h>
+
+void varfun(int n, ...);
+
+
+int main()
+
+{
+
+    varfun(3, 7, -11.2, 0.66);
+
+    return 0;
+
+}
+
+void varfun(int n, ...)
+
+{
+
+    float *ptr;
+
+    int num;
+
+    va_start(ptr, n);
+
+    num = va_arg(ptr, int);
+
+    printf("%d", num);
+
+}
+
+
+5. What will be the output of the program below? [10 scores]
+#include<stdio.h>
+
+
+
+    struct course
+
+    {
+
+        int courseno;
+
+        char coursename[25];
+
+    };
+
+int main()
+
+{
+
+    struct course c[] = { {102, "Java"}, 
+
+                          {103, "C C++"}, 
+
+                          {104, "DotNet"}     };
+
+
+
+    printf("%d ", c[1].courseno);
+
+    printf("%s\n", (*(c+2)).coursename);
+
+    return 0;
+
+}
+A. 103 DotNet       B.  102 Java  
+C. 103 C C++       D.  104 DotNet
+
+6. Given input a string, output inverse order, please finish the program below
+viod fun (char str[])  [10 scores ]
+	{
+		char  m;	int i,j;
+			for(i=0,j=strlen(str);i<_____;i++,j--)
+			{
+				m=str[i];
+				str[i]=___;
+				str[j-1]=m;
+			}
+			printf (“%s\n”,str);
+	}
+
+7. What is the output of the program blew___ [10 scores]
+	Main()
+	{ char	x=0x40;
+		Printf(“%d\n”,x<<3);
+	}
+char   arr[ ]=”ABCDE”;
+char   *ptr;
+for(prt=arr,ptr<arr+5;ptr++)printf(‘%s\n”,prt),
+Options:
+A) ABCD     B) A            C)E             D) ABCDE
+                  B             D                BCDF
+                  C             C                CDE
+                  D             B                DE
+                  E             A                  E
+
+8. Please point out the error in the program blow, and what warning message will show while compile it ?. [10 scores , 5 points each.]
+#include<stdio.h>
+
+int mul(int, int); /* Function prototype */
+
+
+
+int main()
+
+{
+
+    int a = 4, b = 3, c;
+
+    c = mul(a, b);
+
+    printf("c = %d\n", c);
+
+    return 0;
+
+}
+
+int mul(int a, int b)
+
+{
+
+   return (a * b);
+
+   return (a - b); 
+
+}
+
+
+9. Please point out the error in the  program blow.
+ [10 scores]
+
+
+#include<stdio.h>
+
+void display(int (*ff)());
+
+
+int main()
+
+{
+
+    int show();
+
+    int (*f)();
+
+    f = show;
+
+    display(f);
+
+    return 0;
+
+}
+
+void display(int (*ff)())
+
+{
+
+    (*ff)();
+
+}
+
+int show()
+
+{
+
+    printf("gosomo.cn");
+
+}
+
+10.  请设计一个电源缓启动电路，用于硬盘瞬间工作时，系统电源稳定性保护。并给出设计原理说明。
+
+
+112. Reading comprehension
+[ 2 scores for each, total 10 scores. ] 
+Method of Scientific Inquiry 
+Why the inductive and mathematical sciences, after their first rapid development at the culmination of Greek civilization, advanced so slowly for two thousand years—and why in the following two hundred years a knowledge of natural and mathematical science has accumulated, which so vastly exceeds all that was previously known that these sciences may be justly regarded as the products of our own times—are questions which have interested the modern philosopher not less than the objects with which these sciences are more immediately conversant. Was it the employment of a new method of research, or in the exercise of greater virtue in the use of the old methods, that this singular modern phenomenon had its origin? Was the long period one of arrested development, and is the modern era one of normal growth? Or should we ascribe the characteristics of both periods to so-called historical accidents—to the influence of conjunctions in circumstances of which no explanation is possible, save in the omnipotence and wisdom of a guiding Providence?
+The explanation which has become commonplace, that the ancients employed deduction chiefly in their scientific inquiries, while the moderns employ induction, proves to be too narrow, and fails upon close examination to point with sufficient distinctness the contrast that is evident between ancient and modern scientific doctrines and inquiries. For all knowledge is founded on observation, and proceeds from this by analysis, by synthesis and analysis, by induction and deduction, and if possible by verification, or by new appeals to observation under the guidance of deduction—by steps which are indeed correlative parts of one method; and the ancient sciences afford examples of every one of these methods, or parts of one method, which have been generalized from the examples of science.
+A failure to employ or to employ adequately any one of these partial methods, an imperfection in the arts and resources of observation and experiment, carelessness in observation, neglect of relevant facts, by appeal to experiment and observation—these are the faults which cause all failures to ascertain truth, whether among the ancients or the moderns; but this statement does not explain why the modern is possessed of a greater virtue, and by what means he attained his superiority. Much less does it explain the sudden growth of science in recent times.
+The attempt to discover the explanation of this phenomenon in the antithesis of “facts” and “theories” or “facts” and “ideas”—in the neglect among the ancients of the former, and their too exclusive attention to the latter—proves also to be too narrow, as well as open to the charge of vagueness. For in the first place, the antithesis is not complete. Facts and theories are not coordinate species. Theories, if true, are facts—a particular class of facts indeed, generally complex, and if a logical connection subsists between their constituents, have all the positive attributes of theories.
+Nevertheless, this distinction, however inadequate it may be to explain the source of true method in science, is well founded, and connotes an important character in true method. A fact is a proposition of simple. A theory, on the other hand, if true has all the characteristics of a fact, except that its verification is possible only by indirect, remote, and difficult means. To convert theories into facts is to add simple verification, and the theory thus acquires the full characteristics of a fact.
+
+1. The title that best expresses the ideas of this passage is 
+[A]. Philosophy of mathematics. [B]. The Recent Growth in Science.
+[C]. The Verification of Facts. [C]. Methods of Scientific Inquiry.
+2. According to the author, one possible reason for the growth of science during the days of the ancient Greeks and in modern times is 
+[A]. the similarity between the two periods.
+[B]. that it was an act of God.
+[C]. that both tried to develop the inductive method.
+[D]. due to the decline of the deductive method.
+3. The difference between “fact” and “theory”
+[A]. is that the latter needs confirmation.
+[B]. rests on the simplicity of the former.
+[C]. is the difference between the modern scientists and the ancient Greeks.
+[D]. helps us to understand the deductive method.
+4. According to the author, mathematics is
+[A]. an inductive science. [B]. in need of simple verification.
+[C]. a deductive science. [D]. based on fact and theory.
+5. The statement “Theories are facts” may be called.
+[A]. a metaphor. [B]. a paradox.
+[C]. an appraisal of the inductive and deductive methods.
+[D]. a pun.
+
+Vocabulary
+1. inductive 归纳法
+induction n.归纳法
+2. deductive 演绎法
+deduction n。演绎法
+3. culmination 到达顶/极点
+4. conversant (with) 熟悉的，精通的
+5. exercise 运用，实行，执行仪式
+singular 卓越的，非凡的，独一无二的
+6. conjunction 结合，同时发生
+7. omnipotence 全能，无限权/威力
+8. Providence （大写）指上帝，天道，天令
+9. commonplace 平凡的，陈腐的
+10. inquiry 调查，探究（真理，知识等）
+11. doctrine 教义，学说，讲义
+12. correlative 相互关联的
+13. antithesis 对立面，对偶（修辞学中），对句
+14. coordinate 同等的，并列的
+15. subsist 生存，维持生活
+16. attribute 特征，属性
+17. connote 意味着，含蓄（指词内涵）
+
+拓展题目：
+1.  输入一个正整数，并判断是否为回数(比如输入12321， 输出：这是一个回数)
+
+
+2. 初始化10个如下的st结构体（item），name和level分别为随机产生并初始
+化链表，然后按照level的大小重新排列，然后删除最中间的item。
+struct  st {
+        char *name；
+        unsigned int level；
+        void *next;
+};
