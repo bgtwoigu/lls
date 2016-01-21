@@ -1,0 +1,54 @@
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/device/qcom/sepolicy$ cd common/
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/device/qcom/sepolicy/common$ ls
+adbd.te             domain.te       init.te          mmi.te                 qcomsysd.te     service_contexts      untrusted_app.te
+adsprpcd.te         dpmd.te         installd.te      mm-pp-daemon.te        qlogd.te        service.te            usb_uicc_daemon.te
+app.te              drmserver.te    ipacm.te         mm-qcamerad.te         qmuxd.te        ssr_diag.te           usf.te
+atfwd.te            file_contexts   irsc_util.te     mpdecision.te          qseecomd.te     ssr_setup.te          vm_bms.te
+audiod.te           file.te         kernel.te        msm_irqbalanced.te     qti.te          subsystem_ramdump.te  vold.te
+bluetooth.te        genfs_contexts  keystore.te      netd.te                radio.te        surfaceflinger.te     wcnss_service.te
+bootanim.te         hbtp.te         location_app.te  netmgrd.te             recovery.te     system_app.te         wfdservice.te
+charger_monitor.te  healthd.te      location.te      perfd.te               rfs_access.te   system_server.te      wpa.te
+cnd.te              hvdcp.te        logd.te          peripheral_manager.te  rild.te         te_macros             zygote.te
+device.te           imscm.te        mcStarter.te     port-bridge.te         rmt_storage.te  thermal-engine.te
+dhcp.te             ims.te          mdm_helper.te    property_contexts      seapp_contexts  time_daemon.te
+diag.te             init_shell.te   mediaserver.te   property.te            sensors.te      ueventd.te
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/device/qcom/sepolicy/common$ vim device.te 
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/device/qcom/sepolicy/common$ grep -r block_device .
+./mdm_helper.te:allow mdm_helper block_device:dir { getattr search write };
+./system_app.te:allow system_app block_device:dir r_dir_perms;
+./file_contexts:/dev/block/mmcblk0                              u:object_r:mmc_block_device:s0
+./qseecomd.te:allow tee block_device:dir r_dir_perms;
+./rmt_storage.te:allow rmt_storage block_device:dir r_dir_perms;
+./rmt_storage.te:allow rmt_storage mmc_block_device:blk_file r_file_perms;
+./qcomsysd.te:allow qcomsysd block_device:dir { search };
+./device.te:type mmc_block_device, dev_type;
+./kernel.te:allow kernel block_device:blk_file r_file_perms;
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/device/qcom/sepolicy/common$ grep -r block_device ../../../../external/
+Display all 199 possibilities? (y or n)
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/device/qcom/sepolicy/common$ grep -r block_device ../../../../external/sepolicy/
+../../../../external/sepolicy/vold.te:allow vold block_device:dir create_dir_perms;
+../../../../external/sepolicy/vold.te:allow vold block_device:blk_file create_file_perms;
+../../../../external/sepolicy/install_recovery.te:allow install_recovery block_device:dir search;
+../../../../external/sepolicy/install_recovery.te:allow install_recovery block_device:blk_file rw_file_perms;
+../../../../external/sepolicy/domain.te:# Don't allow raw read/write/open access to block_device
+../../../../external/sepolicy/domain.te:neverallow { domain -kernel -init -recovery -vold -uncrypt -install_recovery } block_device:blk_file { open read write };
+../../../../external/sepolicy/domain.te:neverallow { domain -init -recovery -system_server } frp_block_device:blk_file rw_file_perms;
+../../../../external/sepolicy/uncrypt.te:allow uncrypt block_device:blk_file w_file_perms;
+../../../../external/sepolicy/uncrypt.te:allow uncrypt block_device:dir r_dir_perms;
+../../../../external/sepolicy/recovery.te:  allow recovery block_device:dir r_dir_perms;
+../../../../external/sepolicy/system_server.te:allow system_server block_device:dir search;
+../../../../external/sepolicy/system_server.te:allow system_server frp_block_device:blk_file rw_file_perms;
+../../../../external/sepolicy/file_contexts:/dev/block(/.*)?	u:object_r:block_device:s0
+../../../../external/sepolicy/device.te:type block_device, dev_type;
+../../../../external/sepolicy/device.te:type root_block_device, dev_type;
+../../../../external/sepolicy/device.te:type frp_block_device, dev_type;
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/device/qcom/sepolicy/common$ \grep ^C
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/device/qcom/sepolicy/common$ grep -r devinfo .
+./system_app.te:allow system_app devinfo:blk_file { open read getattr write };
+./file_contexts:/dev/block/bootdevice/by-name/devinfo           u:object_r:devinfo:s0
+./qcomsysd.te:allow qcomsysd devinfo:blk_file { open read getattr write };
+./device.te:type devinfo, dev_type;
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/device/qcom/sepolicy/common$ grep -r devinfo^C
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/device/qcom/sepolicy/common$ vi file_contexts 
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/device/qcom/sepolicy/common$ 
+

@@ -1,0 +1,1724 @@
+cf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel$ ls
+AndroidKernel.mk  COPYING  Documentation  fs       ipc      kernel       Makefile  README          scripts   tools
+arch              CREDITS  drivers        include  Kbuild   lib          mm        REPORTING-BUGS  security  usr
+block             crypto   firmware       init     Kconfig  MAINTAINERS  net       samples         sound     virt
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel$ cd kernel/
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/kernel$ ls
+acct.c            cpuset.c        hrtimer.c        latencytop.c         pid_namespace.c     relay.c           srcu.c           up.c
+async.c           crash_dump.c    hung_task.c      lockdep.c            posix-cpu-timers.c  res_counter.c     stacktrace.c     user.c
+audit.c           cred.c          irq              lockdep_internals.h  posix-timers.c      resource.c        stop_machine.c   user_namespace.c
+auditfilter.c     debug           irq_work.c       lockdep_proc.c       power               rtmutex.c         sys.c            user-return-notifier.c
+audit.h           delayacct.c     itimer.c         lockdep_states.h     printk.c            rtmutex_common.h  sysctl_binary.c  utsname.c
+auditsc.c         dma.c           jump_label.c     Makefile             profile.c           rtmutex-debug.c   sysctl.c         utsname_sysctl.c
+audit_tree.c      elfcore.c       kallsyms.c       module.c             ptrace.c            rtmutex-debug.h   sys_ni.c         wait.c
+audit_watch.c     events          Kconfig.freezer  mutex.c              range.c             rtmutex.h         taskstats.c      watchdog.c
+backtracetest.c   exec_domain.c   Kconfig.hz       mutex-debug.c        rcu.h               rtmutex-tester.c  test_kprobes.c   workqueue.c
+bounds.c          exit.c          Kconfig.locks    mutex-debug.h        rcupdate.c          rwsem.c           time             workqueue_sched.h
+capability.c      extable.c       Kconfig.preempt  mutex.h              rcutiny.c           sched             time.c
+cgroup.c          fork.c          kexec.c          notifier.c           rcutiny_plugin.h    seccomp.c         timeconst.pl
+cgroup_freezer.c  freezer.c       kfifo.c          nsproxy.c            rcutorture.c        semaphore.c       timer.c
+compat.c          futex.c         kmod.c           padata.c             rcutree.c           signal.c          trace
+configs.c         futex_compat.c  kprobes.c        panic.c              rcutree.h           smp.c             tracepoint.c
+cpu.c             gcov            ksysfs.c         params.c             rcutree_plugin.h    softirq.c         tsacct.c
+cpu_pm.c          groups.c        kthread.c        pid.c                rcutree_trace.c     spinlock.c        uid16.c
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/kernel$ cd 
+debug/  events/ gcov/   irq/    power/  sched/  time/   trace/  
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/kernel$ cd ..
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel$ cd drivers/
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers$ ls
+accessibility  bif          coresight  edac      hid         ieee802154  macintosh  misc      parisc    pps         s390     spi      tty     vlynq
+acpi           block        cpufreq    eisa      hsi         infiniband  Makefile   mmc       parport   ps3         sbus     spmi     uio     w1
+amba           bluetooth    cpuidle    firewire  hv          input       mca        mtd       pci       ptp         scsi     ssb      usb     watchdog
+ata            cdrom        crypto     firmware  hwmon       iommu       md         net       pcmcia    rapidio     sensors  staging  uwb     xen
+atm            char         dca        gosodrv   hwspinlock  isdn        media      nfc       pinctrl   regulator   sfi      switch   vhost   zorro
+auxdisplay     clk          devfreq    gpio      i2c         Kconfig     memstick   nubus     platform  remoteproc  sh       target   video
+base           clocksource  dio        gpu       ide         leds        message    of        pnp       rpmsg       slimbus  tc       virt
+bcma           connector    dma        gud       idle        lguest      mfd        oprofile  power     rtc         sn       thermal  virtio
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers$ cd gosodrv/
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ ls
+111.patch  board  camera  camera_v2  fp  Kconfig  keypad  leds  Makefile  misc  nfc  sensor  touchscreen
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ la
+111.patch  board  camera  camera_v2  fp  .git  Kconfig  keypad  leds  Makefile  misc  nfc  sensor  touchscreen
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git log
+commit f7d3cc062406b1e1cc1f7678c89885ce6e92aef1
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Thu Dec 31 18:19:23 2015 +0800
+
+    Add dual panel
+    
+    Change-Id: I56d929ea799e28b92526a9e1b0b1f26809ca9c98
+
+
+    Add dual panel
+    
+    Change-Id: I56d929ea799e28b92526a9e1b0b1f26809ca9c98
+
+commit 716d9b41af70d1663c97c18f8aa9f9991ba00452
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Wed Dec 23 18:26:23 2015 +0800
+
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Wed Dec 23 18:26:23 2015 +0800
+
+    Change driver for td1231 tp
+    
+    Change-Id: Ieb480d7f14370cef47b6b8d1e1d3be61c054f905
+
+commit c92f1eef883b714087f1ed6f4128709fdb01e10c
+Author: Gaoming Xu <xugaoming@gosomo.cn>
+Date:   Tue Dec 1 18:55:53 2015 +0800
+
+    Fixed:fix goodix fingerprint driver config error
+    
+    Change-Id: Iae1ebca7b8f566dda02e80a36e02195904c65d8f
+
+commit 0de144c0beb7a575a5f453608bcbfa0a0b77628e
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Thu Nov 12 14:08:02 2015 +0800
+
+    update and disable log for better performance
+    
+    Change-Id: I7e648034e7fa1d5f7dca297c6099be6894b2c325
+
+commit 44bfb5d8d3231ff6047a892a38be9e8fc101c67b
+Merge: 39dfe9a 7311f50
+Author: 董焕明 <donghm@gosomo.cn>
+Date:   Wed Nov 11 22:30:40 2015 +0800
+
+    Merge "Add goodix finger printer driver" into msm8x74-4.4
+
+commit 7311f50237d0d1c824b73920c86bbe346ee6e4b1
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed Sep 23 09:07:53 2015 +0800
+
+    Add goodix finger printer driver
+    
+    Change-Id: Ie727ec8824b1fcf8ea68d4b58a52164529cc1895
+
+commit 39dfe9af60694485b0ccfc2346bd833271539d16
+Author: ye ruiyong <yeruiyong@gosomo.cn>
+Date:   Fri Oct 30 17:52:19 2015 +0800
+
+    Fixed:default enable the keypad for project td1231.
+    
+    Change-Id: I96abc0c2a7fc37247ee20991a235d50d0dbb8ec5
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ 
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ 
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git log
+commit f7d3cc062406b1e1cc1f7678c89885ce6e92aef1
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Thu Dec 31 18:19:23 2015 +0800
+
+    Add dual panel
+    
+    Change-Id: I56d929ea799e28b92526a9e1b0b1f26809ca9c98
+
+commit 716d9b41af70d1663c97c18f8aa9f9991ba00452
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Wed Dec 23 18:26:23 2015 +0800
+
+    Change driver for td1231 tp
+    
+    Change-Id: Ieb480d7f14370cef47b6b8d1e1d3be61c054f905
+
+commit c92f1eef883b714087f1ed6f4128709fdb01e10c
+Author: Gaoming Xu <xugaoming@gosomo.cn>
+Date:   Tue Dec 1 18:55:53 2015 +0800
+
+    Fixed:fix goodix fingerprint driver config error
+    
+    Change-Id: Iae1ebca7b8f566dda02e80a36e02195904c65d8f
+
+commit 0de144c0beb7a575a5f453608bcbfa0a0b77628e
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Thu Nov 12 14:08:02 2015 +0800
+
+    update and disable log for better performance
+    
+    Change-Id: I7e648034e7fa1d5f7dca297c6099be6894b2c325
+
+commit 44bfb5d8d3231ff6047a892a38be9e8fc101c67b
+Merge: 39dfe9a 7311f50
+Author: 董焕明 <donghm@gosomo.cn>
+Date:   Wed Nov 11 22:30:40 2015 +0800
+
+    Merge "Add goodix finger printer driver" into msm8x74-4.4
+
+commit 7311f50237d0d1c824b73920c86bbe346ee6e4b1
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed Sep 23 09:07:53 2015 +0800
+
+    Add goodix finger printer driver
+    
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git branch 
+* (detached from c92f1ee)
+  tp
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ gitl og
+No command 'gitl' found, did you mean:
+ Command 'git' from package 'git' (main)
+ Command 'gitk' from package 'gitk' (main)
+ Command 'gitg' from package 'gitg' (universe)
+gitl: command not found
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git log
+commit f7d3cc062406b1e1cc1f7678c89885ce6e92aef1
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Thu Dec 31 18:19:23 2015 +0800
+
+    Add dual panel
+    
+    Change-Id: I56d929ea799e28b92526a9e1b0b1f26809ca9c98
+
+commit 716d9b41af70d1663c97c18f8aa9f9991ba00452
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Wed Dec 23 18:26:23 2015 +0800
+
+    Change driver for td1231 tp
+    
+    Change-Id: Ieb480d7f14370cef47b6b8d1e1d3be61c054f905
+
+commit c92f1eef883b714087f1ed6f4128709fdb01e10c
+Author: Gaoming Xu <xugaoming@gosomo.cn>
+Date:   Tue Dec 1 18:55:53 2015 +0800
+
+    Fixed:fix goodix fingerprint driver config error
+    
+    Change-Id: Iae1ebca7b8f566dda02e80a36e02195904c65d8f
+
+commit 0de144c0beb7a575a5f453608bcbfa0a0b77628e
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Thu Nov 12 14:08:02 2015 +0800
+
+    update and disable log for better performance
+    
+    Change-Id: I7e648034e7fa1d5f7dca297c6099be6894b2c325
+
+commit 44bfb5d8d3231ff6047a892a38be9e8fc101c67b
+Merge: 39dfe9a 7311f50
+Author: 董焕明 <donghm@gosomo.cn>
+Date:   Wed Nov 11 22:30:40 2015 +0800
+
+    Merge "Add goodix finger printer driver" into msm8x74-4.4
+
+commit 7311f50237d0d1c824b73920c86bbe346ee6e4b1
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed Sep 23 09:07:53 2015 +0800
+
+    Add goodix finger printer driver
+    
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git reset --hard 716d9b41af70d1663c97c18f8aa9f9991ba00452
+HEAD is now at 716d9b4 Change driver for td1231 tp
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git log
+commit 716d9b41af70d1663c97c18f8aa9f9991ba00452
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Wed Dec 23 18:26:23 2015 +0800
+
+    Change driver for td1231 tp
+    
+    Change-Id: Ieb480d7f14370cef47b6b8d1e1d3be61c054f905
+
+commit c92f1eef883b714087f1ed6f4128709fdb01e10c
+Author: Gaoming Xu <xugaoming@gosomo.cn>
+Date:   Tue Dec 1 18:55:53 2015 +0800
+
+    Fixed:fix goodix fingerprint driver config error
+    
+    Change-Id: Iae1ebca7b8f566dda02e80a36e02195904c65d8f
+
+commit 0de144c0beb7a575a5f453608bcbfa0a0b77628e
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Thu Nov 12 14:08:02 2015 +0800
+
+    update and disable log for better performance
+    
+    Change-Id: I7e648034e7fa1d5f7dca297c6099be6894b2c325
+
+commit 44bfb5d8d3231ff6047a892a38be9e8fc101c67b
+Merge: 39dfe9a 7311f50
+Author: 董焕明 <donghm@gosomo.cn>
+Date:   Wed Nov 11 22:30:40 2015 +0800
+
+    Merge "Add goodix finger printer driver" into msm8x74-4.4
+
+commit 7311f50237d0d1c824b73920c86bbe346ee6e4b1
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed Sep 23 09:07:53 2015 +0800
+
+    Add goodix finger printer driver
+    
+    Change-Id: Ie727ec8824b1fcf8ea68d4b58a52164529cc1895
+
+commit 39dfe9af60694485b0ccfc2346bd833271539d16
+Author: ye ruiyong <yeruiyong@gosomo.cn>
+Date:   Fri Oct 30 17:52:19 2015 +0800
+
+    Fixed:default enable the keypad for project td1231.
+    
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git commit --amend
+[detached HEAD 0ac5a26] Change tp ft5x06 driver from branch msm8916-4.4
+warning: CRLF will be replaced by LF in touchscreen/ft5x06/pramboot.i.
+The file will have its original line endings in your working directory.
+ 13 files changed, 4352 insertions(+), 2336 deletions(-)
+ create mode 100755 touchscreen/ft5x06/Makefile
+ create mode 100644 touchscreen/ft5x06/ft5x06_ts.c
+ create mode 100644 touchscreen/ft5x06/ft5x06_ts.h
+ create mode 100644 touchscreen/ft5x06/ft5x36_upgrade.c
+ create mode 100644 touchscreen/ft5x06/ft5x46_upgrade.c
+ create mode 100644 touchscreen/ft5x06/ft6x06_upgrade.c
+ create mode 100644 touchscreen/ft5x06/ft6x36_upgrade.c
+ create mode 100644 touchscreen/ft5x06/ft_gesture_lib.a_shipped
+ create mode 100644 touchscreen/ft5x06/ft_gesture_lib.h
+ create mode 100644 touchscreen/ft5x06/pramboot.i
+ delete mode 100755 touchscreen/ft5x06_ts.c
+ delete mode 100644 touchscreen/ft5x06_ts.h
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git branch 
+* (detached from c92f1ee)
+  tp
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git branch -a
+* (detached from c92f1ee)
+  tp
+  remotes/m/msm8x74 -> origin/msm8x74-4.4
+  remotes/origin/master
+  remotes/origin/msm8x10-4.3
+  remotes/origin/msm8x10-4.4
+  remotes/origin/msm8x16-4.4
+  remotes/origin/msm8x74-4.4
+  remotes/origin/msm8x74-4.4-ebens
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git commit --amend
+[detached HEAD e7abf8a] Change tp ft5x06 driver from branch msm8x16-4.4 http://192.168.180.176:3000/issues/7238
+warning: CRLF will be replaced by LF in touchscreen/ft5x06/pramboot.i.
+The file will have its original line endings in your working directory.
+ 13 files changed, 4352 insertions(+), 2336 deletions(-)
+ create mode 100755 touchscreen/ft5x06/Makefile
+ create mode 100644 touchscreen/ft5x06/ft5x06_ts.c
+ create mode 100644 touchscreen/ft5x06/ft5x06_ts.h
+ create mode 100644 touchscreen/ft5x06/ft5x36_upgrade.c
+ create mode 100644 touchscreen/ft5x06/ft5x46_upgrade.c
+ create mode 100644 touchscreen/ft5x06/ft6x06_upgrade.c
+ create mode 100644 touchscreen/ft5x06/ft6x36_upgrade.c
+ create mode 100644 touchscreen/ft5x06/ft_gesture_lib.a_shipped
+ create mode 100644 touchscreen/ft5x06/ft_gesture_lib.h
+ create mode 100644 touchscreen/ft5x06/pramboot.i
+ delete mode 100755 touchscreen/ft5x06_ts.c
+ delete mode 100644 touchscreen/ft5x06_ts.h
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git log
+commit e7abf8ae04f9900afd67f834b3138fcc6dcdc22f
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Wed Dec 23 18:26:23 2015 +0800
+
+    Change tp ft5x06 driver from branch msm8x16-4.4
+    http://192.168.180.176:3000/issues/7238
+    
+    Change-Id: Ieb480d7f14370cef47b6b8d1e1d3be61c054f905
+
+commit c92f1eef883b714087f1ed6f4128709fdb01e10c
+Author: Gaoming Xu <xugaoming@gosomo.cn>
+Date:   Tue Dec 1 18:55:53 2015 +0800
+
+    Fixed:fix goodix fingerprint driver config error
+    
+    Change-Id: Iae1ebca7b8f566dda02e80a36e02195904c65d8f
+
+commit 0de144c0beb7a575a5f453608bcbfa0a0b77628e
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Thu Nov 12 14:08:02 2015 +0800
+
+    update and disable log for better performance
+    
+    Change-Id: I7e648034e7fa1d5f7dca297c6099be6894b2c325
+
+commit 44bfb5d8d3231ff6047a892a38be9e8fc101c67b
+Merge: 39dfe9a 7311f50
+Author: 董焕明 <donghm@gosomo.cn>
+Date:   Wed Nov 11 22:30:40 2015 +0800
+
+    Merge "Add goodix finger printer driver" into msm8x74-4.4
+
+commit 7311f50237d0d1c824b73920c86bbe346ee6e4b1
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed Sep 23 09:07:53 2015 +0800
+
+    Add goodix finger printer driver
+    
+    Change-Id: Ie727ec8824b1fcf8ea68d4b58a52164529cc1895
+
+commit 39dfe9af60694485b0ccfc2346bd833271539d16
+Author: ye ruiyong <yeruiyong@gosomo.cn>
+Date:   Fri Oct 30 17:52:19 2015 +0800
+
+    Fixed:default enable the keypad for project td1231.
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git commit --amend
+[detached HEAD ffb53b3] Change tp ft5x06 driver from branch msm8x16-4.4
+warning: CRLF will be replaced by LF in touchscreen/ft5x06/pramboot.i.
+The file will have its original line endings in your working directory.
+ 13 files changed, 4352 insertions(+), 2336 deletions(-)
+ create mode 100755 touchscreen/ft5x06/Makefile
+ create mode 100644 touchscreen/ft5x06/ft5x06_ts.c
+ create mode 100644 touchscreen/ft5x06/ft5x06_ts.h
+ create mode 100644 touchscreen/ft5x06/ft5x36_upgrade.c
+ create mode 100644 touchscreen/ft5x06/ft5x46_upgrade.c
+ create mode 100644 touchscreen/ft5x06/ft6x06_upgrade.c
+ create mode 100644 touchscreen/ft5x06/ft6x36_upgrade.c
+ create mode 100644 touchscreen/ft5x06/ft_gesture_lib.a_shipped
+ create mode 100644 touchscreen/ft5x06/ft_gesture_lib.h
+ create mode 100644 touchscreen/ft5x06/pramboot.i
+ delete mode 100755 touchscreen/ft5x06_ts.c
+ delete mode 100644 touchscreen/ft5x06_ts.h
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ gitl og
+No command 'gitl' found, did you mean:
+ Command 'gitg' from package 'gitg' (universe)
+ Command 'gitk' from package 'gitk' (main)
+ Command 'git' from package 'git' (main)
+gitl: command not found
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git log
+commit ffb53b39c0741a3d3223d308e69a30840c6c59f9
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Wed Dec 23 18:26:23 2015 +0800
+
+    Change tp ft5x06 driver from branch msm8x16-4.4
+    
+    Change-Id: Ieb480d7f14370cef47b6b8d1e1d3be61c054f905
+
+commit c92f1eef883b714087f1ed6f4128709fdb01e10c
+Author: Gaoming Xu <xugaoming@gosomo.cn>
+Date:   Tue Dec 1 18:55:53 2015 +0800
+
+    Fixed:fix goodix fingerprint driver config error
+    
+    Change-Id: Iae1ebca7b8f566dda02e80a36e02195904c65d8f
+
+commit 0de144c0beb7a575a5f453608bcbfa0a0b77628e
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Thu Nov 12 14:08:02 2015 +0800
+
+    update and disable log for better performance
+    
+    Change-Id: I7e648034e7fa1d5f7dca297c6099be6894b2c325
+
+commit 44bfb5d8d3231ff6047a892a38be9e8fc101c67b
+Merge: 39dfe9a 7311f50
+Author: 董焕明 <donghm@gosomo.cn>
+Date:   Wed Nov 11 22:30:40 2015 +0800
+
+    Merge "Add goodix finger printer driver" into msm8x74-4.4
+
+commit 7311f50237d0d1c824b73920c86bbe346ee6e4b1
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed Sep 23 09:07:53 2015 +0800
+
+    Add goodix finger printer driver
+    
+    Change-Id: Ie727ec8824b1fcf8ea68d4b58a52164529cc1895
+
+commit 39dfe9af60694485b0ccfc2346bd833271539d16
+Author: ye ruiyong <yeruiyong@gosomo.cn>
+Date:   Fri Oct 30 17:52:19 2015 +0800
+
+    Fixed:default enable the keypad for project td1231.
+    
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git branch -a
+* (detached from c92f1ee)
+  tp
+  remotes/m/msm8x74 -> origin/msm8x74-4.4
+  remotes/origin/master
+  remotes/origin/msm8x10-4.3
+  remotes/origin/msm8x10-4.4
+  remotes/origin/msm8x16-4.4
+  remotes/origin/msm8x74-4.4
+  remotes/origin/msm8x74-4.4-ebens
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git push origin HEAD:refs/for/msm8x74-4.4
+Counting objects: 1, done.
+Writing objects: 100% (1/1), 265 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+error: unpack failed: error Missing tree 7e986eaaa3f088cc92831dce1a94a9ec5197a9c3
+fatal: Unpack error, check server log
+To ssh://192.168.180.185:29418/goso-development/kernel/driver/gosodrv.git
+ ! [remote rejected] HEAD -> refs/for/msm8x74-4.4 (n/a (unpacker error))
+error: failed to push some refs to 'ssh://192.168.180.185:29418/goso-development/kernel/driver/gosodrv.git'
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git log
+commit ffb53b39c0741a3d3223d308e69a30840c6c59f9
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Wed Dec 23 18:26:23 2015 +0800
+
+    Change tp ft5x06 driver from branch msm8x16-4.4
+    
+    Change-Id: Ieb480d7f14370cef47b6b8d1e1d3be61c054f905
+
+commit c92f1eef883b714087f1ed6f4128709fdb01e10c
+Author: Gaoming Xu <xugaoming@gosomo.cn>
+Date:   Tue Dec 1 18:55:53 2015 +0800
+
+    Fixed:fix goodix fingerprint driver config error
+    
+    Change-Id: Iae1ebca7b8f566dda02e80a36e02195904c65d8f
+
+commit 0de144c0beb7a575a5f453608bcbfa0a0b77628e
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Thu Nov 12 14:08:02 2015 +0800
+
+    update and disable log for better performance
+    
+    Change-Id: I7e648034e7fa1d5f7dca297c6099be6894b2c325
+
+commit 44bfb5d8d3231ff6047a892a38be9e8fc101c67b
+Merge: 39dfe9a 7311f50
+Author: 董焕明 <donghm@gosomo.cn>
+Date:   Wed Nov 11 22:30:40 2015 +0800
+
+    Merge "Add goodix finger printer driver" into msm8x74-4.4
+
+commit 7311f50237d0d1c824b73920c86bbe346ee6e4b1
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed Sep 23 09:07:53 2015 +0800
+
+    Add goodix finger printer driver
+    
+    Change-Id: Ie727ec8824b1fcf8ea68d4b58a52164529cc1895
+
+commit 39dfe9af60694485b0ccfc2346bd833271539d16
+Author: ye ruiyong <yeruiyong@gosomo.cn>
+Date:   Fri Oct 30 17:52:19 2015 +0800
+
+    Fixed:default enable the keypad for project td1231.
+    
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git branch -a
+* (detached from c92f1ee)
+  tp
+  remotes/m/msm8x74 -> origin/msm8x74-4.4
+  remotes/origin/master
+  remotes/origin/msm8x10-4.3
+  remotes/origin/msm8x10-4.4
+  remotes/origin/msm8x16-4.4
+  remotes/origin/msm8x74-4.4
+  remotes/origin/msm8x74-4.4-ebens
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git log
+commit ffb53b39c0741a3d3223d308e69a30840c6c59f9
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Wed Dec 23 18:26:23 2015 +0800
+
+    Change tp ft5x06 driver from branch msm8x16-4.4
+    
+    Change-Id: Ieb480d7f14370cef47b6b8d1e1d3be61c054f905
+
+commit c92f1eef883b714087f1ed6f4128709fdb01e10c
+Author: Gaoming Xu <xugaoming@gosomo.cn>
+Date:   Tue Dec 1 18:55:53 2015 +0800
+
+    Fixed:fix goodix fingerprint driver config error
+    
+    Change-Id: Iae1ebca7b8f566dda02e80a36e02195904c65d8f
+
+commit 0de144c0beb7a575a5f453608bcbfa0a0b77628e
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Thu Nov 12 14:08:02 2015 +0800
+
+    update and disable log for better performance
+    
+    Change-Id: I7e648034e7fa1d5f7dca297c6099be6894b2c325
+
+commit 44bfb5d8d3231ff6047a892a38be9e8fc101c67b
+Merge: 39dfe9a 7311f50
+Author: 董焕明 <donghm@gosomo.cn>
+Date:   Wed Nov 11 22:30:40 2015 +0800
+
+    Merge "Add goodix finger printer driver" into msm8x74-4.4
+
+commit 7311f50237d0d1c824b73920c86bbe346ee6e4b1
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed Sep 23 09:07:53 2015 +0800
+
+    Add goodix finger printer driver
+    
+    Change-Id: Ie727ec8824b1fcf8ea68d4b58a52164529cc1895
+
+commit 39dfe9af60694485b0ccfc2346bd833271539d16
+Author: ye ruiyong <yeruiyong@gosomo.cn>
+Date:   Fri Oct 30 17:52:19 2015 +0800
+
+    Fixed:default enable the keypad for project td1231.
+    
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git push origin HEAD:refs/for/msm8x74-4.4
+Counting objects: 1, done.
+Writing objects: 100% (1/1), 265 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+error: unpack failed: error Missing tree 7e986eaaa3f088cc92831dce1a94a9ec5197a9c3
+fatal: Unpack error, check server log
+To ssh://192.168.180.185:29418/goso-development/kernel/driver/gosodrv.git
+ ! [remote rejected] HEAD -> refs/for/msm8x74-4.4 (n/a (unpacker error))
+error: failed to push some refs to 'ssh://192.168.180.185:29418/goso-development/kernel/driver/gosodrv.git'
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git log
+commit ffb53b39c0741a3d3223d308e69a30840c6c59f9
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Wed Dec 23 18:26:23 2015 +0800
+
+    Change tp ft5x06 driver from branch msm8x16-4.4
+    
+    Change-Id: Ieb480d7f14370cef47b6b8d1e1d3be61c054f905
+
+commit c92f1eef883b714087f1ed6f4128709fdb01e10c
+Author: Gaoming Xu <xugaoming@gosomo.cn>
+Date:   Tue Dec 1 18:55:53 2015 +0800
+
+    Fixed:fix goodix fingerprint driver config error
+    
+    Change-Id: Iae1ebca7b8f566dda02e80a36e02195904c65d8f
+
+commit 0de144c0beb7a575a5f453608bcbfa0a0b77628e
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Thu Nov 12 14:08:02 2015 +0800
+
+    update and disable log for better performance
+    
+    Change-Id: I7e648034e7fa1d5f7dca297c6099be6894b2c325
+
+commit 44bfb5d8d3231ff6047a892a38be9e8fc101c67b
+Merge: 39dfe9a 7311f50
+Author: 董焕明 <donghm@gosomo.cn>
+Date:   Wed Nov 11 22:30:40 2015 +0800
+
+    Merge "Add goodix finger printer driver" into msm8x74-4.4
+
+commit 7311f50237d0d1c824b73920c86bbe346ee6e4b1
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed Sep 23 09:07:53 2015 +0800
+
+    Add goodix finger printer driver
+    
+    Change-Id: Ie727ec8824b1fcf8ea68d4b58a52164529cc1895
+
+commit 39dfe9af60694485b0ccfc2346bd833271539d16
+Author: ye ruiyong <yeruiyong@gosomo.cn>
+Date:   Fri Oct 30 17:52:19 2015 +0800
+
+    Fixed:default enable the keypad for project td1231.
+    
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git checkout -b aa
+Switched to a new branch 'aa'
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git branch -a
+* aa
+  tp
+  remotes/m/msm8x74 -> origin/msm8x74-4.4
+  remotes/origin/master
+  remotes/origin/msm8x10-4.3
+  remotes/origin/msm8x10-4.4
+  remotes/origin/msm8x16-4.4
+  remotes/origin/msm8x74-4.4
+  remotes/origin/msm8x74-4.4-ebens
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git checkout -t remotes/origin/msm8x74-4.4
+Branch msm8x74-4.4 set up to track remote branch msm8x74-4.4 from origin.
+Switched to a new branch 'msm8x74-4.4'
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git log
+commit c92f1eef883b714087f1ed6f4128709fdb01e10c
+Author: Gaoming Xu <xugaoming@gosomo.cn>
+Date:   Tue Dec 1 18:55:53 2015 +0800
+
+    Fixed:fix goodix fingerprint driver config error
+    
+    Change-Id: Iae1ebca7b8f566dda02e80a36e02195904c65d8f
+
+commit 0de144c0beb7a575a5f453608bcbfa0a0b77628e
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Thu Nov 12 14:08:02 2015 +0800
+
+    update and disable log for better performance
+    
+    Change-Id: I7e648034e7fa1d5f7dca297c6099be6894b2c325
+
+commit 44bfb5d8d3231ff6047a892a38be9e8fc101c67b
+Merge: 39dfe9a 7311f50
+Author: 董焕明 <donghm@gosomo.cn>
+Date:   Wed Nov 11 22:30:40 2015 +0800
+
+    Merge "Add goodix finger printer driver" into msm8x74-4.4
+
+commit 7311f50237d0d1c824b73920c86bbe346ee6e4b1
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed Sep 23 09:07:53 2015 +0800
+
+    Add goodix finger printer driver
+    
+    Change-Id: Ie727ec8824b1fcf8ea68d4b58a52164529cc1895
+
+commit 39dfe9af60694485b0ccfc2346bd833271539d16
+Author: ye ruiyong <yeruiyong@gosomo.cn>
+Date:   Fri Oct 30 17:52:19 2015 +0800
+
+    Fixed:default enable the keypad for project td1231.
+    
+    Change-Id: I96abc0c2a7fc37247ee20991a235d50d0dbb8ec5
+
+commit c3acc7ea17e580c1b51c5d6cafa64f4e8d32da9a
+Author: kesun <kesun.zhou@gosomo.cn>
+Date:   Thu Aug 27 11:43:13 2015 +0800
+
+    Fix include current dir ft5x06_ts.h file instead of linux.
+    
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ repo sync .
+
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git log
+commit c92f1eef883b714087f1ed6f4128709fdb01e10c
+Author: Gaoming Xu <xugaoming@gosomo.cn>
+Date:   Tue Dec 1 18:55:53 2015 +0800
+
+    Fixed:fix goodix fingerprint driver config error
+    
+    Change-Id: Iae1ebca7b8f566dda02e80a36e02195904c65d8f
+
+commit 0de144c0beb7a575a5f453608bcbfa0a0b77628e
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Thu Nov 12 14:08:02 2015 +0800
+
+    update and disable log for better performance
+    
+    Change-Id: I7e648034e7fa1d5f7dca297c6099be6894b2c325
+
+commit 44bfb5d8d3231ff6047a892a38be9e8fc101c67b
+Merge: 39dfe9a 7311f50
+Author: 董焕明 <donghm@gosomo.cn>
+Date:   Wed Nov 11 22:30:40 2015 +0800
+
+    Merge "Add goodix finger printer driver" into msm8x74-4.4
+
+commit 7311f50237d0d1c824b73920c86bbe346ee6e4b1
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed Sep 23 09:07:53 2015 +0800
+
+    Add goodix finger printer driver
+    
+    Change-Id: Ie727ec8824b1fcf8ea68d4b58a52164529cc1895
+
+commit 39dfe9af60694485b0ccfc2346bd833271539d16
+Author: ye ruiyong <yeruiyong@gosomo.cn>
+Date:   Fri Oct 30 17:52:19 2015 +0800
+
+    Fixed:default enable the keypad for project td1231.
+    
+    Change-Id: I96abc0c2a7fc37247ee20991a235d50d0dbb8ec5
+
+commit c3acc7ea17e580c1b51c5d6cafa64f4e8d32da9a
+Author: kesun <kesun.zhou@gosomo.cn>
+Date:   Thu Aug 27 11:43:13 2015 +0800
+
+    Fix include current dir ft5x06_ts.h file instead of linux.
+    
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git branch 
+  aa
+* msm8x74-4.4
+  tp
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git checkout aa
+Switched to branch 'aa'
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git log
+commit ffb53b39c0741a3d3223d308e69a30840c6c59f9
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Wed Dec 23 18:26:23 2015 +0800
+
+    Change tp ft5x06 driver from branch msm8x16-4.4
+    
+    Change-Id: Ieb480d7f14370cef47b6b8d1e1d3be61c054f905
+
+commit c92f1eef883b714087f1ed6f4128709fdb01e10c
+Author: Gaoming Xu <xugaoming@gosomo.cn>
+Date:   Tue Dec 1 18:55:53 2015 +0800
+
+    Fixed:fix goodix fingerprint driver config error
+    
+    Change-Id: Iae1ebca7b8f566dda02e80a36e02195904c65d8f
+
+commit 0de144c0beb7a575a5f453608bcbfa0a0b77628e
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Thu Nov 12 14:08:02 2015 +0800
+
+    update and disable log for better performance
+    
+    Change-Id: I7e648034e7fa1d5f7dca297c6099be6894b2c325
+
+commit 44bfb5d8d3231ff6047a892a38be9e8fc101c67b
+Merge: 39dfe9a 7311f50
+Author: 董焕明 <donghm@gosomo.cn>
+Date:   Wed Nov 11 22:30:40 2015 +0800
+
+    Merge "Add goodix finger printer driver" into msm8x74-4.4
+
+commit 7311f50237d0d1c824b73920c86bbe346ee6e4b1
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed Sep 23 09:07:53 2015 +0800
+
+    Add goodix finger printer driver
+    
+    Change-Id: Ie727ec8824b1fcf8ea68d4b58a52164529cc1895
+
+commit 39dfe9af60694485b0ccfc2346bd833271539d16
+Author: ye ruiyong <yeruiyong@gosomo.cn>
+Date:   Fri Oct 30 17:52:19 2015 +0800
+
+    Fixed:default enable the keypad for project td1231.
+    
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git branch 
+* aa
+  msm8x74-4.4
+  tp
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git checkout msm8x74
+msm8x74             msm8x74-4.4         msm8x74-4.4-ebens   
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git checkout msm8x74-4.4
+Switched to branch 'msm8x74-4.4'
+Your branch is up-to-date with 'origin/msm8x74-4.4'.
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git cherry-pick ffb53b39c0741a3d3223d308e69a30840c6c59f9
+[msm8x74-4.4 64480e9] Change tp ft5x06 driver from branch msm8x16-4.4
+ 13 files changed, 4352 insertions(+), 2336 deletions(-)
+ create mode 100755 touchscreen/ft5x06/Makefile
+ create mode 100644 touchscreen/ft5x06/ft5x06_ts.c
+ create mode 100644 touchscreen/ft5x06/ft5x06_ts.h
+ create mode 100644 touchscreen/ft5x06/ft5x36_upgrade.c
+ create mode 100644 touchscreen/ft5x06/ft5x46_upgrade.c
+ create mode 100644 touchscreen/ft5x06/ft6x06_upgrade.c
+ create mode 100644 touchscreen/ft5x06/ft6x36_upgrade.c
+ create mode 100644 touchscreen/ft5x06/ft_gesture_lib.a_shipped
+ create mode 100644 touchscreen/ft5x06/ft_gesture_lib.h
+ create mode 100644 touchscreen/ft5x06/pramboot.i
+ delete mode 100755 touchscreen/ft5x06_ts.c
+ delete mode 100644 touchscreen/ft5x06_ts.h
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git push origin HEAD:refs/for/msm8x74-4.4
+Counting objects: 1, done.
+Writing objects: 100% (1/1), 266 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+error: unpack failed: error Missing tree 7e986eaaa3f088cc92831dce1a94a9ec5197a9c3
+fatal: Unpack error, check server log
+To ssh://192.168.180.185:29418/goso-development/kernel/driver/gosodrv.git
+ ! [remote rejected] HEAD -> refs/for/msm8x74-4.4 (n/a (unpacker error))
+error: failed to push some refs to 'ssh://192.168.180.185:29418/goso-development/kernel/driver/gosodrv.git'
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git log
+commit 64480e99eb1efd8369470e6766e5c36f3fbb2bf7
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Wed Dec 23 18:26:23 2015 +0800
+
+    Change tp ft5x06 driver from branch msm8x16-4.4
+    
+    Change-Id: Ieb480d7f14370cef47b6b8d1e1d3be61c054f905
+
+commit c92f1eef883b714087f1ed6f4128709fdb01e10c
+Author: Gaoming Xu <xugaoming@gosomo.cn>
+Date:   Tue Dec 1 18:55:53 2015 +0800
+
+    Fixed:fix goodix fingerprint driver config error
+    
+    Change-Id: Iae1ebca7b8f566dda02e80a36e02195904c65d8f
+
+commit 0de144c0beb7a575a5f453608bcbfa0a0b77628e
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Thu Nov 12 14:08:02 2015 +0800
+
+    update and disable log for better performance
+    
+    Change-Id: I7e648034e7fa1d5f7dca297c6099be6894b2c325
+
+commit 44bfb5d8d3231ff6047a892a38be9e8fc101c67b
+Merge: 39dfe9a 7311f50
+Author: 董焕明 <donghm@gosomo.cn>
+Date:   Wed Nov 11 22:30:40 2015 +0800
+
+    Merge "Add goodix finger printer driver" into msm8x74-4.4
+
+commit 7311f50237d0d1c824b73920c86bbe346ee6e4b1
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed Sep 23 09:07:53 2015 +0800
+
+    Add goodix finger printer driver
+    
+    Change-Id: Ie727ec8824b1fcf8ea68d4b58a52164529cc1895
+
+commit 39dfe9af60694485b0ccfc2346bd833271539d16
+Author: ye ruiyong <yeruiyong@gosomo.cn>
+Date:   Fri Oct 30 17:52:19 2015 +0800
+
+    Fixed:default enable the keypad for project td1231.
+    
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ 
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git log
+commit 64480e99eb1efd8369470e6766e5c36f3fbb2bf7
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Wed Dec 23 18:26:23 2015 +0800
+
+    Change tp ft5x06 driver from branch msm8x16-4.4
+    
+    Change-Id: Ieb480d7f14370cef47b6b8d1e1d3be61c054f905
+
+commit c92f1eef883b714087f1ed6f4128709fdb01e10c
+Author: Gaoming Xu <xugaoming@gosomo.cn>
+Date:   Tue Dec 1 18:55:53 2015 +0800
+
+    Fixed:fix goodix fingerprint driver config error
+    
+    Change-Id: Iae1ebca7b8f566dda02e80a36e02195904c65d8f
+
+commit 0de144c0beb7a575a5f453608bcbfa0a0b77628e
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Thu Nov 12 14:08:02 2015 +0800
+
+    update and disable log for better performance
+    
+    Change-Id: I7e648034e7fa1d5f7dca297c6099be6894b2c325
+
+commit 44bfb5d8d3231ff6047a892a38be9e8fc101c67b
+Merge: 39dfe9a 7311f50
+Author: 董焕明 <donghm@gosomo.cn>
+Date:   Wed Nov 11 22:30:40 2015 +0800
+
+    Merge "Add goodix finger printer driver" into msm8x74-4.4
+
+commit 7311f50237d0d1c824b73920c86bbe346ee6e4b1
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed Sep 23 09:07:53 2015 +0800
+
+    Add goodix finger printer driver
+    
+    Change-Id: Ie727ec8824b1fcf8ea68d4b58a52164529cc1895
+
+commit 39dfe9af60694485b0ccfc2346bd833271539d16
+Author: ye ruiyong <yeruiyong@gosomo.cn>
+Date:   Fri Oct 30 17:52:19 2015 +0800
+
+    Fixed:default enable the keypad for project td1231.
+    
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git push --no-thin origin HEAD:refs/for/msm8x74-4.4
+Counting objects: 15, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 37.46 KiB | 0 bytes/s, done.
+Total 15 (delta 3), reused 3 (delta 0)
+remote: Resolving deltas: 100% (3/3)
+remote: Processing changes: updated: 1, refs: 1, done    
+remote: (W) 64480e9: no files changed, message updated
+To ssh://192.168.180.185:29418/goso-development/kernel/driver/gosodrv.git
+ * [new branch]      HEAD -> refs/for/msm8x74-4.4
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git branch -a
+  aa
+* msm8x74-4.4
+  tp
+  remotes/m/msm8x74 -> origin/msm8x74-4.4
+  remotes/origin/master
+  remotes/origin/msm8x10-4.3
+  remotes/origin/msm8x10-4.4
+  remotes/origin/msm8x16-4.4
+  remotes/origin/msm8x74-4.4
+  remotes/origin/msm8x74-4.4-ebens
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git fetch http://192.168.180.185:8081/goso-development/kernel/driver/gosodrv refs/changes/25/16425/3 && git cherry-pick FETCH_HEAD
+From http://192.168.180.185:8081/goso-development/kernel/driver/gosodrv
+ * branch            refs/changes/25/16425/3 -> FETCH_HEAD
+[msm8x74-4.4 092ba43] Add dual panel
+ 2 files changed, 111 insertions(+), 13 deletions(-)
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git log
+commit 092ba4361879a4ab2ac2224b40a022ffdea08d65
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Thu Dec 31 18:19:23 2015 +0800
+
+    Add dual panel
+    
+    Change-Id: I56d929ea799e28b92526a9e1b0b1f26809ca9c98
+
+commit 64480e99eb1efd8369470e6766e5c36f3fbb2bf7
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Wed Dec 23 18:26:23 2015 +0800
+
+    Change tp ft5x06 driver from branch msm8x16-4.4
+    
+    Change-Id: Ieb480d7f14370cef47b6b8d1e1d3be61c054f905
+
+commit c92f1eef883b714087f1ed6f4128709fdb01e10c
+Author: Gaoming Xu <xugaoming@gosomo.cn>
+Date:   Tue Dec 1 18:55:53 2015 +0800
+
+    Fixed:fix goodix fingerprint driver config error
+    
+    Change-Id: Iae1ebca7b8f566dda02e80a36e02195904c65d8f
+
+commit 0de144c0beb7a575a5f453608bcbfa0a0b77628e
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Thu Nov 12 14:08:02 2015 +0800
+
+    update and disable log for better performance
+    
+    Change-Id: I7e648034e7fa1d5f7dca297c6099be6894b2c325
+
+commit 44bfb5d8d3231ff6047a892a38be9e8fc101c67b
+Merge: 39dfe9a 7311f50
+Author: 董焕明 <donghm@gosomo.cn>
+Date:   Wed Nov 11 22:30:40 2015 +0800
+
+    Merge "Add goodix finger printer driver" into msm8x74-4.4
+
+commit 7311f50237d0d1c824b73920c86bbe346ee6e4b1
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed Sep 23 09:07:53 2015 +0800
+
+    Add goodix finger printer driver
+    
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ ls
+111.patch  board  camera  camera_v2  fp  Kconfig  keypad  leds  Makefile  misc  nfc  sensor  touchscreen
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git log
+commit 092ba4361879a4ab2ac2224b40a022ffdea08d65
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Thu Dec 31 18:19:23 2015 +0800
+
+    Add dual panel
+    
+    Change-Id: I56d929ea799e28b92526a9e1b0b1f26809ca9c98
+
+commit 64480e99eb1efd8369470e6766e5c36f3fbb2bf7
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Wed Dec 23 18:26:23 2015 +0800
+
+    Change tp ft5x06 driver from branch msm8x16-4.4
+    
+    Change-Id: Ieb480d7f14370cef47b6b8d1e1d3be61c054f905
+
+commit c92f1eef883b714087f1ed6f4128709fdb01e10c
+Author: Gaoming Xu <xugaoming@gosomo.cn>
+Date:   Tue Dec 1 18:55:53 2015 +0800
+
+    Fixed:fix goodix fingerprint driver config error
+    
+    Change-Id: Iae1ebca7b8f566dda02e80a36e02195904c65d8f
+
+commit 0de144c0beb7a575a5f453608bcbfa0a0b77628e
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Thu Nov 12 14:08:02 2015 +0800
+
+    update and disable log for better performance
+    
+    Change-Id: I7e648034e7fa1d5f7dca297c6099be6894b2c325
+
+commit 44bfb5d8d3231ff6047a892a38be9e8fc101c67b
+Merge: 39dfe9a 7311f50
+Author: 董焕明 <donghm@gosomo.cn>
+Date:   Wed Nov 11 22:30:40 2015 +0800
+
+    Merge "Add goodix finger printer driver" into msm8x74-4.4
+
+commit 7311f50237d0d1c824b73920c86bbe346ee6e4b1
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed Sep 23 09:07:53 2015 +0800
+
+    Add goodix finger printer driver
+    
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git branch 
+  aa
+* msm8x74-4.4
+  tp
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git log
+commit 092ba4361879a4ab2ac2224b40a022ffdea08d65
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Thu Dec 31 18:19:23 2015 +0800
+
+    Add dual panel
+    
+    Change-Id: I56d929ea799e28b92526a9e1b0b1f26809ca9c98
+
+commit 64480e99eb1efd8369470e6766e5c36f3fbb2bf7
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Wed Dec 23 18:26:23 2015 +0800
+
+    Change tp ft5x06 driver from branch msm8x16-4.4
+    
+    Change-Id: Ieb480d7f14370cef47b6b8d1e1d3be61c054f905
+
+commit c92f1eef883b714087f1ed6f4128709fdb01e10c
+Author: Gaoming Xu <xugaoming@gosomo.cn>
+Date:   Tue Dec 1 18:55:53 2015 +0800
+
+    Fixed:fix goodix fingerprint driver config error
+    
+    Change-Id: Iae1ebca7b8f566dda02e80a36e02195904c65d8f
+
+commit 0de144c0beb7a575a5f453608bcbfa0a0b77628e
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Thu Nov 12 14:08:02 2015 +0800
+
+    update and disable log for better performance
+    
+    Change-Id: I7e648034e7fa1d5f7dca297c6099be6894b2c325
+
+commit 44bfb5d8d3231ff6047a892a38be9e8fc101c67b
+Merge: 39dfe9a 7311f50
+Author: 董焕明 <donghm@gosomo.cn>
+Date:   Wed Nov 11 22:30:40 2015 +0800
+
+    Merge "Add goodix finger printer driver" into msm8x74-4.4
+
+commit 7311f50237d0d1c824b73920c86bbe346ee6e4b1
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed Sep 23 09:07:53 2015 +0800
+
+    Add goodix finger printer driver
+    
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git commit --amend
+[msm8x74-4.4 53c4746] Add dual panel http://192.168.180.176:3000/issues/7238
+ 2 files changed, 111 insertions(+), 13 deletions(-)
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git log
+commit 53c4746067f7218a6ac3849246e5a64ac30302ba
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Thu Dec 31 18:19:23 2015 +0800
+
+    Add dual panel
+    http://192.168.180.176:3000/issues/7238
+    
+    Change-Id: I56d929ea799e28b92526a9e1b0b1f26809ca9c98
+
+commit 64480e99eb1efd8369470e6766e5c36f3fbb2bf7
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Wed Dec 23 18:26:23 2015 +0800
+
+    Change tp ft5x06 driver from branch msm8x16-4.4
+    
+    Change-Id: Ieb480d7f14370cef47b6b8d1e1d3be61c054f905
+
+commit c92f1eef883b714087f1ed6f4128709fdb01e10c
+Author: Gaoming Xu <xugaoming@gosomo.cn>
+Date:   Tue Dec 1 18:55:53 2015 +0800
+
+    Fixed:fix goodix fingerprint driver config error
+    
+    Change-Id: Iae1ebca7b8f566dda02e80a36e02195904c65d8f
+
+commit 0de144c0beb7a575a5f453608bcbfa0a0b77628e
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Thu Nov 12 14:08:02 2015 +0800
+
+    update and disable log for better performance
+    
+    Change-Id: I7e648034e7fa1d5f7dca297c6099be6894b2c325
+
+commit 44bfb5d8d3231ff6047a892a38be9e8fc101c67b
+Merge: 39dfe9a 7311f50
+Author: 董焕明 <donghm@gosomo.cn>
+Date:   Wed Nov 11 22:30:40 2015 +0800
+
+    Merge "Add goodix finger printer driver" into msm8x74-4.4
+
+commit 7311f50237d0d1c824b73920c86bbe346ee6e4b1
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed Sep 23 09:07:53 2015 +0800
+
+    Add goodix finger printer driver
+    
+    Change-Id: Ie727ec8824b1fcf8ea68d4b58a52164529cc1895
+
+commit 39dfe9af60694485b0ccfc2346bd833271539d16
+Author: ye ruiyong <yeruiyong@gosomo.cn>
+Date:   Fri Oct 30 17:52:19 2015 +0800
+
+    Fixed:default enable the keypad for project td1231.
+    
+    Change-Id: I96abc0c2a7fc37247ee20991a235d50d0dbb8ec5
+
+commit c3acc7ea17e580c1b51c5d6cafa64f4e8d32da9a
+Author: kesun <kesun.zhou@gosomo.cn>
+Date:   Thu Aug 27 11:43:13 2015 +0800
+
+    Fix include current dir ft5x06_ts.h file instead of linux.
+    
+    Change-Id: I15838d9366c08505e29154e07659abbbc8956685
+
+commit d70e5875c998877f1586f88815f6a76e81d08b64
+Author: kesun <kesun.zhou@gosomo.cn>
+Date:   Tue Aug 11 20:12:45 2015 +0800
+
+    Fix disable inacitve events(tp/keyboard) when wakeup.
+    
+    Change-Id: I79c2e123c7dde573fb08ce9bf2c2f6e54338c2c3
+
+commit 653e1b3a5cec54c18b4b5226f0160eefacca3ad8
+Author: kesun <kesun.zhou@gosomo.cn>
+Date:   Mon Aug 10 17:39:54 2015 +0800
+
+    Add support active touchscreen event when switch dynamically.
+    
+    Change-Id: Ibf419cf2f823519fe1edff11ecd5bca17da2a5fc
+
+commit 195bcc2ba2cfd5ba03345a027e7b20a844ca536a
+Author: kesun <kesun.zhou@gosomo.cn>
+Date:   Mon Aug 10 17:30:42 2015 +0800
+
+    Add switch driver code to support dual-panels.
+    
+    Change-Id: Iac74500e40debc3070786402b4aa2959796b204d
+
+commit 84bf95ca82d7cb50d201d0ca66ebdb6c35b7ba54
+Author: eastzhang <eastzhang@gosomo.cn>
+Date:   Fri Jul 31 15:14:08 2015 +0800
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git branch 
+  aa
+* msm8x74-4.4
+  tp
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$  git push --no-thin origin HEAD:refs/for/msm8x74-4.4
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 18.82 KiB | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+remote: Processing changes: updated: 1, refs: 1, done    
+remote: (W) 53c4746: no files changed, message updated, was rebased
+To ssh://192.168.180.185:29418/goso-development/kernel/driver/gosodrv.git
+ * [new branch]      HEAD -> refs/for/msm8x74-4.4
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ 
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ 
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ 
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ 
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ 
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git status
+On branch msm8x74-4.4
+Your branch is ahead of 'origin/msm8x74-4.4' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	111.patch
+	touchscreen/ft5x06/ft5x06_ts.c_old
+	touchscreen/ft5x06/tags
+	touchscreen/tags
+
+nothing added to commit but untracked files present (use "git add" to track)
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git log
+commit 53c4746067f7218a6ac3849246e5a64ac30302ba
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Thu Dec 31 18:19:23 2015 +0800
+
+    Add dual panel
+    http://192.168.180.176:3000/issues/7238
+    
+    Change-Id: I56d929ea799e28b92526a9e1b0b1f26809ca9c98
+
+commit 64480e99eb1efd8369470e6766e5c36f3fbb2bf7
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Wed Dec 23 18:26:23 2015 +0800
+
+    Change tp ft5x06 driver from branch msm8x16-4.4
+    
+    Change-Id: Ieb480d7f14370cef47b6b8d1e1d3be61c054f905
+
+commit c92f1eef883b714087f1ed6f4128709fdb01e10c
+Author: Gaoming Xu <xugaoming@gosomo.cn>
+Date:   Tue Dec 1 18:55:53 2015 +0800
+
+    Fixed:fix goodix fingerprint driver config error
+    
+    Change-Id: Iae1ebca7b8f566dda02e80a36e02195904c65d8f
+
+commit 0de144c0beb7a575a5f453608bcbfa0a0b77628e
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Thu Nov 12 14:08:02 2015 +0800
+
+    update and disable log for better performance
+    
+    Change-Id: I7e648034e7fa1d5f7dca297c6099be6894b2c325
+
+commit 44bfb5d8d3231ff6047a892a38be9e8fc101c67b
+Merge: 39dfe9a 7311f50
+Author: 董焕明 <donghm@gosomo.cn>
+Date:   Wed Nov 11 22:30:40 2015 +0800
+
+    Merge "Add goodix finger printer driver" into msm8x74-4.4
+
+commit 7311f50237d0d1c824b73920c86bbe346ee6e4b1
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed Sep 23 09:07:53 2015 +0800
+
+    Add goodix finger printer driver
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git commit --amend 
+[msm8x74-4.4 cd5d31c] Add dual panel
+ 2 files changed, 111 insertions(+), 13 deletions(-)
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git log
+commit cd5d31c9c9fb156111dc1124021a305f5d268a65
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Thu Dec 31 18:19:23 2015 +0800
+
+    Add dual panel
+    
+    http://192.168.180.176:3000/issues/7238
+    
+    Change-Id: I56d929ea799e28b92526a9e1b0b1f26809ca9c98
+
+commit 64480e99eb1efd8369470e6766e5c36f3fbb2bf7
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Wed Dec 23 18:26:23 2015 +0800
+
+    Change tp ft5x06 driver from branch msm8x16-4.4
+    
+    Change-Id: Ieb480d7f14370cef47b6b8d1e1d3be61c054f905
+
+commit c92f1eef883b714087f1ed6f4128709fdb01e10c
+Author: Gaoming Xu <xugaoming@gosomo.cn>
+Date:   Tue Dec 1 18:55:53 2015 +0800
+
+    Fixed:fix goodix fingerprint driver config error
+    
+    Change-Id: Iae1ebca7b8f566dda02e80a36e02195904c65d8f
+
+commit 0de144c0beb7a575a5f453608bcbfa0a0b77628e
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Thu Nov 12 14:08:02 2015 +0800
+
+    update and disable log for better performance
+    
+    Change-Id: I7e648034e7fa1d5f7dca297c6099be6894b2c325
+
+commit 44bfb5d8d3231ff6047a892a38be9e8fc101c67b
+Merge: 39dfe9a 7311f50
+Author: 董焕明 <donghm@gosomo.cn>
+Date:   Wed Nov 11 22:30:40 2015 +0800
+
+    Merge "Add goodix finger printer driver" into msm8x74-4.4
+
+commit 7311f50237d0d1c824b73920c86bbe346ee6e4b1
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed Sep 23 09:07:53 2015 +0800
+
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git push --no-thin origin HEAD:refs/for/msm8x74-4.4
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 18.82 KiB | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+remote: Processing changes: updated: 1, refs: 1, done    
+remote: (W) cd5d31c: no files changed, message updated
+To ssh://192.168.180.185:29418/goso-development/kernel/driver/gosodrv.git
+ * [new branch]      HEAD -> refs/for/msm8x74-4.4
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git log
+commit cd5d31c9c9fb156111dc1124021a305f5d268a65
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Thu Dec 31 18:19:23 2015 +0800
+
+    Add dual panel
+    
+    http://192.168.180.176:3000/issues/7238
+    
+    Change-Id: I56d929ea799e28b92526a9e1b0b1f26809ca9c98
+
+commit 64480e99eb1efd8369470e6766e5c36f3fbb2bf7
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Wed Dec 23 18:26:23 2015 +0800
+
+    Change tp ft5x06 driver from branch msm8x16-4.4
+    
+    Change-Id: Ieb480d7f14370cef47b6b8d1e1d3be61c054f905
+
+commit c92f1eef883b714087f1ed6f4128709fdb01e10c
+Author: Gaoming Xu <xugaoming@gosomo.cn>
+Date:   Tue Dec 1 18:55:53 2015 +0800
+
+    Fixed:fix goodix fingerprint driver config error
+    
+    Change-Id: Iae1ebca7b8f566dda02e80a36e02195904c65d8f
+
+commit 0de144c0beb7a575a5f453608bcbfa0a0b77628e
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Thu Nov 12 14:08:02 2015 +0800
+
+    update and disable log for better performance
+    
+    Change-Id: I7e648034e7fa1d5f7dca297c6099be6894b2c325
+
+commit 44bfb5d8d3231ff6047a892a38be9e8fc101c67b
+Merge: 39dfe9a 7311f50
+Author: 董焕明 <donghm@gosomo.cn>
+Date:   Wed Nov 11 22:30:40 2015 +0800
+
+    Merge "Add goodix finger printer driver" into msm8x74-4.4
+
+commit 7311f50237d0d1c824b73920c86bbe346ee6e4b1
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed Sep 23 09:07:53 2015 +0800
+
+    Add goodix finger printer driver
+    
+    Change-Id: Ie727ec8824b1fcf8ea68d4b58a52164529cc1895
+
+commit 39dfe9af60694485b0ccfc2346bd833271539d16
+Author: ye ruiyong <yeruiyong@gosomo.cn>
+Date:   Fri Oct 30 17:52:19 2015 +0800
+
+    Fixed:default enable the keypad for project td1231.
+    
+    Change-Id: I96abc0c2a7fc37247ee20991a235d50d0dbb8ec5
+
+commit c3acc7ea17e580c1b51c5d6cafa64f4e8d32da9a
+Author: kesun <kesun.zhou@gosomo.cn>
+Date:   Thu Aug 27 11:43:13 2015 +0800
+
+    Fix include current dir ft5x06_ts.h file instead of linux.
+    
+    Change-Id: I15838d9366c08505e29154e07659abbbc8956685
+
+commit d70e5875c998877f1586f88815f6a76e81d08b64
+Author: kesun <kesun.zhou@gosomo.cn>
+Date:   Tue Aug 11 20:12:45 2015 +0800
+
+    Fix disable inacitve events(tp/keyboard) when wakeup.
+    
+    Change-Id: I79c2e123c7dde573fb08ce9bf2c2f6e54338c2c3
+
+commit 653e1b3a5cec54c18b4b5226f0160eefacca3ad8
+Author: kesun <kesun.zhou@gosomo.cn>
+Date:   Mon Aug 10 17:39:54 2015 +0800
+
+    Add support active touchscreen event when switch dynamically.
+    
+    Change-Id: Ibf419cf2f823519fe1edff11ecd5bca17da2a5fc
+
+commit 195bcc2ba2cfd5ba03345a027e7b20a844ca536a
+Author: kesun <kesun.zhou@gosomo.cn>
+Date:   Mon Aug 10 17:30:42 2015 +0800
+
+    Add switch driver code to support dual-panels.
+    
+    Change-Id: Iac74500e40debc3070786402b4aa2959796b204d
+
+commit 84bf95ca82d7cb50d201d0ca66ebdb6c35b7ba54
+Author: eastzhang <eastzhang@gosomo.cn>
+Date:   Fri Jul 31 15:14:08 2015 +0800
+
+    Change driver to support devices with mulit TPs
+    
+    Change-Id: Iebab00dda5a37fe94352eb1bccadd2eb5681bdd9
+
+commit b8551155b139ef0dae8af285ed00d505aefde0c3
+Author: eastzhang <eastzhang@gosomo.cn>
+Date:   Thu Jul 9 11:54:38 2015 +0800
+
+    Add keypad driver and keypad backlight led
+    
+    Change-Id: I7490529aa6d5f28e98941a797a0e36158f828e00
+
+commit 41e9192ecdb911ce624c00ff41afa73bccf04c7c
+
+commit 84bf95ca82d7cb50d201d0ca66ebdb6c35b7ba54
+Author: eastzhang <eastzhang@gosomo.cn>
+Date:   Fri Jul 31 15:14:08 2015 +0800
+
+    Change driver to support devices with mulit TPs
+    
+    Change-Id: Iebab00dda5a37fe94352eb1bccadd2eb5681bdd9
+
+commit b8551155b139ef0dae8af285ed00d505aefde0c3
+Author: eastzhang <eastzhang@gosomo.cn>
+Date:   Thu Jul 9 11:54:38 2015 +0800
+
+    Add keypad driver and keypad backlight led
+    
+    Change-Id: I7490529aa6d5f28e98941a797a0e36158f828e00
+
+commit 41e9192ecdb911ce624c00ff41afa73bccf04c7c
+Author: eastzhang <eastzhang@gosomo.cn>
+Date:   Tue Jul 7 18:31:10 2015 +0800
+
+    Add TD1231 product
+    
+    Change-Id: I1c5f53964aba3ac4d928278f6ec2c30f702462cd
+
+commit cc253a8b0abcc6ea47aa392beb56aa48b4efa5fe
+Author: tanfuping <tanfuping@gosomo.cn>
+Date:   Mon Nov 3 10:21:03 2014 +0800
+
+    Fixed: sync hall driver for msm8926 platform
+    
+    Change-Id: Ia03ebbd25f9d9bf51525a783af52866d89ae6ce5
+
+commit 77928693054a579ba277085a618fa276f8d297a5
+Author: tanfuping <tanfuping@gosomo.cn>
+Date:   Fri Sep 26 12:07:32 2014 +0800
+
+    Fixed: add hall sensor driver
+    
+    Change-Id: I917e98a3dd10b3dc96f4f5aab5bbec71deb2c04a
+
+commit 49bd526cb4c084e2cba0c1e264fcc6fff20eabb7
+Author: liuqiang <liuqiang@gosomo.cn>
+Date:   Fri Sep 19 17:42:24 2014 +0800
+
+    Add: Compatible imx219&ov8858 driver & add imx135 actuator IC dw9718s.
+    
+    Change-Id: I5d76353418a9a3314a0860f315a5a5cab9fcd08d
+
+commit 637b13b4dcf6da4e64803007d0a55cfc69dddcf5
+Author: liuqiang <liuqiang@gosomo.cn>
+Date:   Mon Sep 15 18:08:23 2014 +0800
+
+    Add: add camera imx179&imx135 driver.
+    
+    Change-Id: I1dfffa641277b19905c3fa18dc1afb3114048590
+
+commit 0511f3312c47d566712da5df564daf60b4bba4a7
+Author: tanfuping <tanfuping@gosomo.cn>
+Date:   Mon Sep 1 16:15:48 2014 +0800
+
+    Fixed: add pn544 kconfig and driver
+    
+    Change-Id: I84857ffe15a767d83f135e9f98a659f24f676eaa
+
+commit 525b90bee7ac9c481600452d35b5b8488cc7c7c7
+Author: tanfuping <tanfuping@gosomo.cn>
+Date:   Thu Aug 28 11:21:30 2014 +0800
+
+    Fixed: fixed tp bug
+    
+    Change-Id: Ieec17237e561b9367f9b703b4eac4cedfaef22e8
+
+commit 357c8e9025652f18d3eb0443caccdb5e310b6d8f
+Author: tanfuping <tanfuping@gosomo.cn>
+Date:   Mon Aug 25 11:18:15 2014 +0800
+
+    Init: add sensor akm8963/tmd2771x config and driver files
+    
+    Change-Id: I4155512b0a6108de66653d125073a834915c7269
+
+commit 1aea45b2dcdc26405839df5ae728f71ca05a9371
+Author: tanfuping <tanfuping@gosomo.cn>
+Date:   Sat Aug 16 12:04:03 2014 +0800
+
+    Fixed: add vkey Coordinate to do for ft5x60
+    
+    Change-Id: Ib6595354adc150fae4c70785e6415d5bf0cf99d8
+
+commit 61497b73f0c7ba4893bea7daca880e1deb5b39fd
+Author: tanfuping <tanfuping@gosomo.cn>
+Date:   Mon Aug 11 14:30:33 2014 +0800
+
+    Fixed: modify compile error for gt9xx TP
+    
+    Change-Id: Ia5dc24e27b8b5c597e474c62394d5d81fc7e7104
+
+commit 3f23cc6e60f7d055059b85f3e8f6de0e3eb516b8
+Author: tanfuping <tanfuping@gosomo.cn>
+Date:   Fri Aug 8 17:48:47 2014 +0800
+
+    Add project fa7401 in drivers/gosodrv Kconfig
+    
+    Change-Id: Iff9258369a777211faa62f31c8f4265d0641f613
+
+commit 411fa2fbef47117f2830dff81b2bf6b1687004d5
+Author: liuqiang <liuqiang@gosomo.cn>
+Date:   Thu Jun 5 10:36:13 2014 +0800
+
+    Add project ua1209 in drivers/goso.
+    
+    Change-Id: Id4cf5b9f5fffad6ac016bb0845cedf1ebda8c192
+
+commit 79b9f2ad2c53d8503feb78fdc41f2ede3f853069
+Author: tanfuping <tanfuping@gosomo.cn>
+Date:   Sat May 24 12:18:06 2014 +0800
+
+    Function: add GT9xx driver
+    
+    Change-Id: I89417676176cf70347c9ba5e0b83996de8eb75db
+
+commit 66d8c0b8f9a330247301bb084f50b97a1ccfe7ad
+Author: tanfuping <tanfuping@gosomo.cn>
+Date:   Fri May 16 18:50:29 2014 +0800
+
+    Fixed: add uald07_nu4 project name
+    
+    Change-Id: I6d77659baa7409329745e0e585951f955c7ca94d
+
+commit 1fe03d44e152f66bca950cb5884679223fbf6981
+Author: xionggh <xiongguanghui@gosomo.cn>
+Date:   Wed Apr 30 17:35:30 2014 +0800
+
+    Add: add ov13850.
+    
+    Change-Id: I0db1cfc45e65b8eee44224d73de06dbc59b0f183
+
+commit 84d5e0e2d171a32805bae913870fb25520eca17b
+Author: xionggh <xiongguanghui@gosomo.cn>
+Date:   Thu Apr 17 17:44:14 2014 +0800
+
+    Add: surrport ualb01 switch_key .
+    
+    Change-Id: I202e567bef01eef2fe96ca8d77ba261008c9c4d4
+
+commit deb7fbfdf06f246bf62faee46391cbcc067d0fb7
+Author: liuqiang <liuqiang@gosomo.cn>
+Date:   Mon Apr 14 15:10:14 2014 +0800
+
+    Add project calc07 in drivers/gosodrv Kconfig.
+    
+    Change-Id: Ie2cfc325e38a5a897f793378008c6d79fac73b28
+
+commit 1b401fbbac9e002e31ef2d0456e622ccd6beaaef
+Author: cwy <chenwanying@gosomo.cn>
+Date:   Tue Apr 8 18:00:26 2014 +0800
+
+    add uald07
+    
+    Change-Id: I6a44ecf091a59f587502af61a2028fdb6b7955c6
+
+commit adaded09ee61e9837be392c027fbf9eb1ace9bb2
+Author: hamming <donghm@gosomo.cn>
+Date:   Tue Apr 1 12:06:27 2014 +0800
+
+    Add project ualc08.
+    
+    Change-Id: Ia6e7dc1fb3dc705c2a2ca4377b151317d867b7cb
+
+commit e4f50b1547e311c103e04534eee831a66d465494
+Author: xionggh <xiongguanghui@gosomo.cn>
+Date:   Mon Mar 31 19:00:57 2014 +0800
+
+    Add: 1. add gc2235&imx135 for goso camera_v2 driver.
+         2. modify btp driver.
+    
+    Change-Id: Ie6d66984345130abdaca856da3a8bd12498685d6
+
+commit 252fa6bd70e967e31c546ff5036cd6a2b95d66eb
+Author: cwy <chenwanying@gosomo.cn>
+Date:   Mon Mar 31 18:22:42 2014 +0800
+
+    add gen_vkeys
+    
+    Change-Id: I662c90a7c417d8f754b1fd1e2531fc6b41b38afa
+
+commit f7f85265bdc1549a067cde5b4d049989ac9815db
+Author: hamming <donghm@gosomo.cn>
+Date:   Mon Mar 31 15:04:22 2014 +0800
+
+    Add project UALC04 and UACL06.
+    
+    Change-Id: I209b537a381ae8ff090670b8da836b156530b8ec
+
+commit a03a2030922eecc0e65113e613ac95023bd5e03a
+Merge: dafae2b 656df15
+Author: hamming <donghm@gosomo.cn>
+Date:   Thu Mar 20 17:15:57 2014 +0800
+
+    Merge "Add LCD_BACKLIGHT_BRIGHTNESS_INVERT for inverting pwm signal level."
+
+commit 656df1573f97da1fb8e8235eeab987d190c3f452
+Author: hamming <donghm@gosomo.cn>
+Date:   Thu Mar 20 17:15:01 2014 +0800
+
+    Add LCD_BACKLIGHT_BRIGHTNESS_INVERT for inverting pwm signal level.
+    
+    Change-Id: Ic102c168e9300a8e49a212db15710ee036d48837
+
+commit dafae2b04ff4cbfa81aa0c0767fbda83806e792a
+Author: xionggh <xiongguanghui@gosomo.cn>
+Date:   Thu Mar 20 11:30:45 2014 +0800
+
+    Add: add sensor FPC1080 , cannot detect the finger yet.
+    
+    Change-Id: I1a3d384e72fc2000a670e5ff838551a000af1407
+
+commit 7181a408180a3a7ab2eadc0c2fa6e178a9244c6c
+Author: tanfuping <tanfuping@gosomo.cn>
+Date:   Thu Mar 20 11:30:45 2014 +0800
+
+    Add: add sensor FPC1080 , cannot detect the finger yet.
+    
+    Change-Id: I1a3d384e72fc2000a670e5ff838551a000af1407
+
+commit 7181a408180a3a7ab2eadc0c2fa6e178a9244c6c
+Author: tanfuping <tanfuping@gosomo.cn>
+    
+    Change-Id: Ia6e7dc1fb3dc705c2a2ca4377b151317d867b7cb
+
+commit e4f50b1547e311c103e04534eee831a66d465494
+Author: xionggh <xiongguanghui@gosomo.cn>
+Date:   Mon Mar 31 19:00:57 2014 +0800
+
+    Add: 1. add gc2235&imx135 for goso camera_v2 driver.
+         2. modify btp driver.
+    
+    Change-Id: Ie6d66984345130abdaca856da3a8bd12498685d6
+
+commit 252fa6bd70e967e31c546ff5036cd6a2b95d66eb
+Author: cwy <chenwanying@gosomo.cn>
+Date:   Mon Mar 31 18:22:42 2014 +0800
+
+    add gen_vkeys
+    
+    Change-Id: I662c90a7c417d8f754b1fd1e2531fc6b41b38afa
+
+commit f7f85265bdc1549a067cde5b4d049989ac9815db
+Author: hamming <donghm@gosomo.cn>
+Date:   Mon Mar 31 15:04:22 2014 +0800
+
+    Add project UALC04 and UACL06.
+    
+    Change-Id: I209b537a381ae8ff090670b8da836b156530b8ec
+
+commit a03a2030922eecc0e65113e613ac95023bd5e03a
+Merge: dafae2b 656df15
+Author: hamming <donghm@gosomo.cn>
+Date:   Thu Mar 20 17:15:57 2014 +0800
+
+    Merge "Add LCD_BACKLIGHT_BRIGHTNESS_INVERT for inverting pwm signal level."
+
+commit 656df1573f97da1fb8e8235eeab987d190c3f452
+Author: hamming <donghm@gosomo.cn>
+Date:   Thu Mar 20 17:15:01 2014 +0800
+
+    Add LCD_BACKLIGHT_BRIGHTNESS_INVERT for inverting pwm signal level.
+    
+    Change-Id: Ic102c168e9300a8e49a212db15710ee036d48837
+
+commit dafae2b04ff4cbfa81aa0c0767fbda83806e792a
+Author: xionggh <xiongguanghui@gosomo.cn>
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ 
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ 
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ 
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ 
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ 
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ 
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ 
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ 
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ 
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ 
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/kernel/drivers/gosodrv$ git log
+commit cd5d31c9c9fb156111dc1124021a305f5d268a65
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Thu Dec 31 18:19:23 2015 +0800
+
+commit cd5d31c9c9fb156111dc1124021a305f5d268a65
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Thu Dec 31 18:19:23 2015 +0800
+
+    Add dual panel
+    
+    http://192.168.180.176:3000/issues/7238
+    
+    Change-Id: I56d929ea799e28b92526a9e1b0b1f26809ca9c98
+
+commit 64480e99eb1efd8369470e6766e5c36f3fbb2bf7
+Author: 张根健 <zhanggenjian@gosomo.cn>
+Date:   Wed Dec 23 18:26:23 2015 +0800
+
+    Change tp ft5x06 driver from branch msm8x16-4.4
+    
+    Change-Id: Ieb480d7f14370cef47b6b8d1e1d3be61c054f905
+
+commit c92f1eef883b714087f1ed6f4128709fdb01e10c
+Author: Gaoming Xu <xugaoming@gosomo.cn>
+Date:   Tue Dec 1 18:55:53 2015 +0800
+
+    Fixed:fix goodix fingerprint driver config error
+    
+    Change-Id: Iae1ebca7b8f566dda02e80a36e02195904c65d8f
+
+commit 0de144c0beb7a575a5f453608bcbfa0a0b77628e
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Thu Nov 12 14:08:02 2015 +0800
+
+    update and disable log for better performance
+    
+    Change-Id: I7e648034e7fa1d5f7dca297c6099be6894b2c325
+
+commit 44bfb5d8d3231ff6047a892a38be9e8fc101c67b
+Merge: 39dfe9a 7311f50
+Author: 董焕明 <donghm@gosomo.cn>
+Date:   Wed Nov 11 22:30:40 2015 +0800
+
+    Merge "Add goodix finger printer driver" into msm8x74-4.4
+
+commit 7311f50237d0d1c824b73920c86bbe346ee6e4b1
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed Sep 23 09:07:53 2015 +0800
+
+

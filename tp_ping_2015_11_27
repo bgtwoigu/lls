@@ -1,0 +1,38 @@
+
+
+Dear friend!
+问题 #7140 已由 叶 锐泳 更新。
+
+指派给 从 叶 锐泳 变更为 张 根健
+
+----------------------------------------
+需求 #7140: LA0908 外接屏和TP点亮(工厂MMI)
+http://192.168.180.176:3000/issues/7140#change-22249
+
+* 作者: li teana
+* 状态: 新建
+* 优先级: 高
+* 指派给: 张 根健
+* 类别: 
+* 目标版本: 
+* 提单部门: 项目部
+* 回归不通过次数: 0
+* 模块: 屏问题
+* 问题所属领域: 软件问题
+* 计划完成日期: 2015-12-08
+----------------------------------------
+如题，LA0908目前使用虚拟屏存在稳定性差，连接时间长等问题，不能作为后续量产MMI测试使用工具。
+ 
+所以请董工指派工程师实现该功能。屏和TP资料路径如下：
+ 
+\\192.168.180.176\project\msm8909\LA0908-优克联\05-外设资料\TP+LCD
+
+*复用的为FA0900项目的屏和TP，触控IC：GT9147，5点触控*
+
+
+ 
+
+
+-- You have received this notification because you have either subscribed to it, or are involved in it. To change your notification preferences, please click here: http://192.168.180.176:3000 http://hostname/my/account
+
+

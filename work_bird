@@ -1,0 +1,93 @@
+ubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android$ cd vendor/
+ubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor$ la
+EVOLVEO  GlocalMe  google  goso-common  HOSAN  MTT  NUU  oinom  qcom  QILIVE  UC  uucun  yizhuo
+//项目目录
+
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe$ la
+E1
+
+cd arch/arm/boot/dts/
+cd qcom/
+cd fa0900/
+vi dsi-panel-hx8394a-720p-video_tcl.dtsi 
+vi fa0900-touchsceen.dtsi 
+cd la0908
+
+ vi kernel/arch/arm/boot/dts/qcom/fa0900/dsi-panel-hx8394a-720p-video_tcl.dtsi
+//触摸和lcd的dts
+
+ubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/bootable/bootloader/lk/target/msm8909$ vi oem_panel.c 
+
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/bootable/bootloader/lk/target/msm8909$ adb shell
+shell@E1:/ $ exit
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/bootable/bootloader/lk/target/msm8909$ adb root
+adbd cannot run as root in production builds
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/bootable/bootloader/lk/target/msm8909$ adb root gosomo.cn
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/bootable/bootloader/lk/target/msm8909$ adb shell
+root@E1:/ # cat proc/cmdline
+sched_enable_hmp=1 androidboot.hardware=qcom androidboot.oem.product=E1 user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk androidboot.emmc=true androidboot.serialno=f5a7cc36 androidboot.mode=engineering androidboot.baseband=msm mdss_mdp3.panel=1:dsi:0:qcom,mdss_dsi_hx8379a_fwvga_skua_video:1:none
+//看lk传的参数
+
+adb shell cat proc/kmsg  抓log
+adb shell input keyevent 26  //唤醒屏幕，  电源键
+
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor$ cd oinom/V16/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/oinom/V16$ la
+AndroidBoard.mk     bdroid_buildcfg.h  buildandroid-V10.sh  overlay   radio     sepolicy  vendorsetup.sh
+AndroidProducts.mk  BoardConfig.mk     .git                 prebuilt  resource  V16.
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/oinom/V16/resource/system/usr/keylayout$ la
+ft5x06_ts.kl  gpio-keys.kl  qpnp_pon.kl
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/oinom/V16/resource/system/usr/keylayout$ vi ft5x06_ts.kl
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/oinom/V16/resource/system/usr/keylayout$ vi ft5x06_ts.kl
+ push
+ 644
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe/E1/resource/system/usr/keylayout$ adb shell getevent 
+add device 1: /dev/input/event6
+  name:     "msm8909-snd-card Headset Jack"
+add device 2: /dev/input/event5
+  name:     "msm8909-snd-card Button Jack"
+add device 3: /dev/input/event2
+  name:     "virtual_touch"
+add device 4: /dev/input/event1
+  name:     "Goodix-CTP"
+add device 5: /dev/input/event0
+  name:     "qpnp_pon"
+could not get driver version for /dev/input/mice, Not a typewriter
+add device 6: /dev/input/event4
+  name:     "gpio-keys"
+add device 7: /dev/input/event3
+  name:     "accelerometer"
+//按键映射
+
+Fixed:updata lcd otm1287a config for v16.
+
+remove some useless debug macro for la0908.
+
+ Add lcd and tp (hx8394a,gt9147) for la0908.
+
+
+ git push caf HEAD:refs/caf/msm8909-1138
+
+
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe/E1$ git branch -a
+* lcd
+  remotes/m/msm8909 -> origin/master
+  remotes/origin/master
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe/E1$ git push origin HEAD:refs/for/master
+Counting objects: 24, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (10/10), 967 bytes | 0 bytes/s, done.
+Total 10 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3)
+remote: Processing changes: new: 1, refs: 1, done    
+remote: 
+remote: New Changes:
+remote:   http://192.168.180.185:8081/16063
+remote: 
+To ssh://192.168.180.185:29418/goso-development/projects/GlocalMe/E1.git
+ * [new branch]      HEAD -> refs/for/master
+
+scp -p -P 29418 lcf@192.168.180.185:hooks/commit-msg .git/hooks/ 
+//提交
+

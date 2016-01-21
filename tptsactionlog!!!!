@@ -1,0 +1,84 @@
+com/fa0900$ cp fa0900-mdss-panel.dtsi ../la0908/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/kernel/arch/arm/boot/dts/qcom/fa0900$ cp fa0900-touchsceen.dtsi ../la0908/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/kernel/arch/arm/boot/dts/qcom/fa0900$ cp dsi-panel-hx8394a-720p-video_tcl.dtsi ../la0908/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/kernel/arch/arm/boot/dts/qcom/fa0900$ cp dsi-panel-otm1283a-720p-video_linglong.dtsi  ../la0908/
+
+
+lcf@lcfubuntu:~/zgjwork/readdir/msm09/kernel/arch/arm/boot/dts/qcom/la0908$ ls
+batterydata-palladium.dtsi         msm8909-goso-la0908.dts     msm8909-ipcrouter.dtsi  msm8909-pm8909.dtsi      msm-gdsc-8916.dtsi
+dsi-panel-hx8394d-720p-video.dtsi  msm8909-goso-la0908p1.dts   msm8909-mdss.dtsi       msm8909-pm8909-mtp.dtsi  msm-iommu-v2.dtsi
+msm8909-bus.dtsi                   msm8909-gpu.dtsi            msm8909-mdss-pll.dtsi   msm8909-pm8909-pm.dtsi   msm-pm8909.dtsi
+msm8909-camera.dtsi                msm8909-iommu-domains.dtsi  msm8909-memory.dtsi     msm8909-regulator.dtsi   msm-pm8909-rpm-regulator.dtsi
+msm8909-coresight.dtsi             msm8909-iommu.dtsi          msm8909-mtp.dtsi        msm8909-sensors.dtsi     skeleton64.dtsi
+msm8909.dtsi                       msm8909-ion.dtsi            msm8909-pinctrl.dtsi    msm8909-smp2p.dtsi
+lcf@lcfubuntu:~/zgjwork/readdir/msm09/kernel/arch/arm/boot/dts/qcom/la0908$ cd ..
+lcf@lcfubuntu:~/zgjwork/readdir/msm09/kernel/arch/arm/boot/dts/qcom$ cd fa0900/
+lcf@lcfubuntu:~/zgjwork/readdir/msm09/kernel/arch/arm/boot/dts/qcom/fa0900$ ls
+batterydata-palladium.dtsi                   msm8909-coresight.dtsi      msm8909-mdss.dtsi        msm8909-sensors.dtsi
+dsi-panel-hx8394a-720p-video_tcl.dtsi        msm8909.dtsi                msm8909-mdss-pll.dtsi    msm8909-smp2p.dtsi
+dsi-panel-otm1283a-720p-video_linglong.dtsi  msm8909-goso-fa0900.dts     msm8909-mtp.dtsi         msm-gdsc-8916.dtsi
+fa0900-mdss-panel.dtsi                       msm8909-gpu.dtsi            msm8909-pinctrl.dtsi     msm-iommu-v2.dtsi
+fa0900-touchsceen.dtsi                       msm8909-iommu-domains.dtsi  msm8909-pm8909.dtsi      msm-pm8909.dtsi
+msm8909-bus.dtsi                             msm8909-iommu.dtsi          msm8909-pm8909-mtp.dtsi  msm-pm8909-rpm-regulator.dtsi
+msm8909-camera.dtsi                          msm8909-ion.dtsi            msm8909-pm8909-pm.dtsi   skeleton64.dtsi
+msm8909-camera-sensor-mtp.dtsi               msm8909-ipcrouter.dtsi      msm8909-regulator.dtsi
+lcf@lcfubuntu:~/zgjwork/readdir/msm09/kernel/arch/arm/boot/dts/qcom/fa0900$ vim fa0900-mdss-panel.dtsi 
+
+
+
+
+
+
+
+#include "msm8909.dtsi"
+#include "msm8909-pinctrl.dtsi"
+//#include "msm8909-camera-sensor-mtp.dtsi"
+#include "msm8909-sensors.dtsi"
+
+#include "fa0900-touchsceen.dtsi"  //add by myself
+#include "fa0900-mdss-panel.dtsi"  //add by myself
+
+
+./bootloader/lk/dev/gcdb/display/include/panel_hx8394a_720p_video.h:
+#define ARRAY_SIZES(arr) (sizeof(arr)/sizeof(arr[0]))
+#define CONFIG_FA0900// xxxxxxxxxxx
+
+
+// #include "dsi-panel-hx8394d-720p-video.dtsi
+
+在 msm8909-mtp。dtsi
+&mdss_dsi0 {
+	// qcom,dsi-pref-prim-pan = <&dsi_hx8394d_720_vid>;
+    qcom,dsi-pref-prim-pan = <&dsi_hx8394a_720_vid_tcl>;
+	pinctrl-names = "mdss_default", "mdss_sleep";
+
+
+
+
+// &dsi_hx8394d_720_vid {
+//	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_pwm";
+//	qcom,mdss-dsi-bl-pmic-pwm-frequency = <100>;
+//	qcom,mdss-dsi-bl-pmic-bank-select = <0>;
+//	qcom,mdss-dsi-pwm-gpio = <&pm8909_mpps 2 0>;
+//	qcom,cont-splash-enabled;
+//};
+
+
+
+
+Error: /home/lcf/zgjwork/commsm/qmss11-8909/LINUX/android/kernel/arch/arm/boot/dts/qcom/la0908p1/fa0900-touchsceen.dtsi:13.1-5 syntax error
+FATAL ERROR: Unable to parse input tree
+make[3]: *** [arch/arm/boot/dts/qcom/../msm8909-goso-la0908p1.dtb] Error 1
+
+In file included from /home/lcf/zgjwork/commsm/qmss11-8909/LINUX/android/kernel/arch/arm/boot/dts/qcom/la0908p1/msm8909-goso-la0908p1.dts:16:0:
+/home/lcf/zgjwork/commsm/qmss11-8909/LINUX/android/kernel/arch/arm/boot/dts/qcom/la0908p1/msm8909-mtp.dtsi:12:33: fatal error: a0900-touchsceen.dtsi: No such file or directory
+ #include "a0900-touchsceen.dtsi"
+
+
+ERROR (phandle_references): Reference to non-existent node or label "mmsm_gpio"
+
+
+
+
+rintk(KERN_INFO"helloiamgood")
+

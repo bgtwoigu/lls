@@ -1,0 +1,520 @@
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/kernel/arch/arm/boot/dts/qcom/fa0900$ cd ../..
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/kernel/arch/arm/boot/dts$ cd ../..
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/kernel/arch/arm$ cd ..
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/kernel/arch$ cd ../..
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android$ cd vendor/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor$ la
+EVOLVEO  GlocalMe  google  goso-common  HOSAN  MTT  NUU  oinom  qcom  QILIVE  UC  uucun  yizhuo
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor$ cd EVOLVEO/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/EVOLVEO$ la
+V16S1
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/EVOLVEO$ cd ..
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor$ la
+EVOLVEO  GlocalMe  google  goso-common  HOSAN  MTT  NUU  oinom  qcom  QILIVE  UC  uucun  yizhuo
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor$ cd GlocalMe/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe$ la
+E1
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe$ cd E1/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe/E1$ la
+AndroidBoard.mk  AndroidProducts.mk  BoardConfig.mk  buildandroid-E1.sh  E1.mk  .git  overlay  prebuilt  resource  vendorsetup.sh
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe/E1$ vi Android
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe/E1$ vi AndroidBoard.mk 
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe/E1$ cd ../..
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor$ cd ../..
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX$ cd android/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android$ la
+abi  bionic    build     cts     developers   device    frameworks  kernel   libnativehelper  ndk       pdk        .repo  system  vendor
+art  bootable  build.sh  dalvik  development  external  hardware    libcore  Makefile         packages  prebuilts  sdk    tools
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android$ source build/envsetup.sh 
+!!! JAVA7_HOME not set !!!
+Please set JAVA7_HOME with the openjdk-7-jdk installed path.
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android$ la
+abi  bionic    build     cts     developers   device    frameworks  kernel   libnativehelper  ndk       pdk        .repo  system  vendor
+art  bootable  build.sh  dalvik  development  external  hardware    libcore  Makefile         packages  prebuilts  sdk    tools
+
+
+
+
+
+cd arch/arm/boot/dts/
+cd qcom/
+cd fa0900/
+vi dsi-panel-hx8394a-720p-video_tcl.dtsi 
+vi fa0900-touchsceen.dtsi 
+cd la0908
+
+
+
+
+
+
+
+2015_12_1
+
+ vi kernel/arch/arm/boot/dts/qcom/fa0900/dsi-panel-hx8394a-720p-video_tcl.dtsi
+
+
+
+ *---------------------------------------------------------------------------*/
+&mdss_mdp {
+	dsi_hx8394a_720_vid_tcl: qcom,mdss_dsi_hx8394a_720p_video_tcl {
+		qcom,mdss-dsi-panel-name = "hx8394a 720p video mode dsi panel";
+		qcom,mdss-dsi-panel-controller = <&mdss_dsi0>;
+		qcom,mdss-dsi-panel-type = "dsi_video_mode";
+		qcom,mdss-dsi-panel-destination = "display_1";
+		qcom,mdss-dsi-panel-framerate = <60>;
+
+
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android$ cd bootable/bootloader/lk/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/bootable/bootloader/lk$ la
+AndroidBoot.mk  app  arch  dev  .git  .gitignore  include  kernel  lib  LICENSE  make  makefile  platform  project  scripts  target
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/bootable/bootloader/lk$ cd target/msm89
+msm8909/ msm8916/ msm8960/ msm8974/ msm8994/ 
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/bootable/bootloader/lk$ cd target/msm8909/
+include/ tools/   
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/bootable/bootloader/lk$ cd target/msm8909/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/bootable/bootloader/lk/target/msm8909$ vi oem_panel.c 
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/bootable/bootloader/lk/target/msm8909$ adb shell
+shell@E1:/ $ exit
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/bootable/bootloader/lk/target/msm8909$ adb root
+adbd cannot run as root in production builds
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/bootable/bootloader/lk/target/msm8909$ adb root gosomo.cn
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/bootable/bootloader/lk/target/msm8909$ adb shell
+root@E1:/ # cat proc/cmdline
+sched_enable_hmp=1 androidboot.hardware=qcom androidboot.oem.product=E1 user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk androidboot.emmc=true androidboot.serialno=f5a7cc36 androidboot.mode=engineering androidboot.baseband=msm mdss_mdp3.panel=1:dsi:0:qcom,mdss_dsi_hx8379a_fwvga_skua_video:1:none
+
+
+adb shell cat proc/kmsg  抓log
+adb shell input keyevent 26  //唤醒屏幕，  电源键
+
+
+
+
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/bootable/bootloader/lk$ cd ..
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/bootable/bootloader$ cd ..
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/bootable$ cd ..
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android$ cd ..
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX$ cd android/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android$ ls
+abi  bionic    build     cts     developers   device    frameworks  kernel   libnativehelper  ndk  packages  prebuilts  system  vendor
+art  bootable  build.sh  dalvik  development  external  hardware    libcore  Makefile         out  pdk       sdk        tools
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android$ cd vendor/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor$ ls
+EVOLVEO  GlocalMe  google  goso-common  HOSAN  MTT  NUU  oinom  qcom  QILIVE  UC  uucun  yizhuo
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor$ cd qcom/
+build/       opensource/  proprietary/ 
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor$ cd HOSAN/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/HOSAN$ la
+LPQ5001
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/HOSAN$ cd ..
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor$ cd uucun/
+apps/     .git/     libs/     products/ 
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor$ cd uucun/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/uucun$ la
+Android.mk  apps  .git  libs  products
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/uucun$ cd ..
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor$ cd yizhuo/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/yizhuo$ la
+Android.mk  apps  .git  libs  products
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/yizhuo$ cd ..
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor$ la
+EVOLVEO  GlocalMe  google  goso-common  HOSAN  MTT  NUU  oinom  qcom  QILIVE  UC  uucun  yizhuo
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor$ la
+EVOLVEO  GlocalMe  google  goso-common  HOSAN  MTT  NUU  oinom  qcom  QILIVE  UC  uucun  yizhuo
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor$ cd yizhuo/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/yizhuo$ la
+Android.mk  apps  .git  libs  products
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/yizhuo$ cd ..
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor$ la
+EVOLVEO  GlocalMe  google  goso-common  HOSAN  MTT  NUU  oinom  qcom  QILIVE  UC  uucun  yizhuo
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor$ cd UC/
+domestic/ .git/     oversea/  products/ 
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor$ cd UC/
+domestic/ .git/     oversea/  products/ 
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor$ cd GlocalMe/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe$ la
+E1
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe$ cd E1/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe/E1$ la
+AndroidBoard.mk  AndroidProducts.mk  BoardConfig.mk  buildandroid-E1.sh  E1.mk  .git  overlay  prebuilt  radio  resource  vendorsetup.sh
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe/E1$ vi AndroidBoard.mk 
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe/E1$ la
+AndroidBoard.mk  AndroidProducts.mk  BoardConfig.mk  buildandroid-E1.sh  E1.mk  .git  overlay  prebuilt  radio  resource  vendorsetup.sh
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe/E1$ cd resource/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe/E1/resource$ la
+audio  bootanimation  data  logo  persist  root  system
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe/E1/resource$ cd system/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe/E1/resource/system$ la
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe/E1/resource/system$ cd ../..
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe/E1$ cd .../.
+bash: cd: .../.: No such file or directory
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe/E1$ cd ../..
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor$ cd oinom/V16/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/oinom/V16$ la
+AndroidBoard.mk     bdroid_buildcfg.h  buildandroid-V10.sh  overlay   radio     sepolicy  vendorsetup.sh
+AndroidProducts.mk  BoardConfig.mk     .git                 prebuilt  resource  V16.mk
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/oinom/V16$ cd resource/system/usr/keylayout/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/oinom/V16/resource/system/usr/keylayout$ la
+ft5x06_ts.kl  gpio-keys.kl  qpnp_pon.kl
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/oinom/V16/resource/system/usr/keylayout$ vi ft5x06_ts.kl
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/oinom/V16/resource/system/usr/keylayout$ vi ft5x06_ts.kl
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/oinom/V16/resource/system/usr/keylayout$ cd ../..
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/oinom/V16/resource/system$ cd ..
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/oinom/V16/resource$ cd ..
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/oinom/V16$ cd ../..
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor$ cd ..
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android$ la
+abi  bionic    build     cts     developers   device    frameworks  kernel   libnativehelper  ndk  packages  prebuilts  sdk     tools
+art  bootable  build.sh  dalvik  development  external  hardware    libcore  Makefile         out  pdk       .repo      system  vendor
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android$ cd 
+abi/             build/           development/     hardware/        ndk/             prebuilts/       tools/           
+art/             cts/             device/          kernel/          out/             .repo/           vendor/          
+bionic/          dalvik/          external/        libcore/         packages/        sdk/             
+bootable/        developers/      frameworks/      libnativehelper/ pdk/             system/          
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android$ cd kernel/
+android/       crypto/        firmware/      include/       kernel/        net/           security/      usr/           
+arch/          Documentation/ fs/            init/          lib/           samples/       sound/         virt/          
+block/         drivers/       .git/          ipc/           mm/            scripts/       tools/         
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android$ cd kernel/
+android/       crypto/        firmware/      include/       kernel/        net/           security/      usr/           
+arch/          Documentation/ fs/            init/          lib/           samples/       sound/         virt/          
+block/         drivers/       .git/          ipc/           mm/            scripts/       tools/         
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android$ cd kernel/arch/
+alpha/      arm64/      c6x/        h8300/      m32r/       microblaze/ openrisc/   s390/       sparc/      unicore32/  
+arc/        avr32/      cris/       hexagon/    m68k/       mips/       parisc/     score/      tile/       x86/        
+arm/        blackfin/   frv/        ia64/       metag/      mn10300/    powerpc/    sh/         um/         xtensa/     
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android$ cd kernel/arch/arm/boot/dts/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/kernel/arch/arm/boot/dts$ la
+aks-cdu.dts                     exynos5250-snow.dts                kirkwood-netgear_readynas_duo_v2.dts     sh73a0-kzm9g.dts
+am335x-bone.dts                 exynos5440.dtsi                    kirkwood-ns2-common.dtsi                 sh73a0-kzm9g-reference.dts
+am335x-evm.dts                  exynos5440-sd5v1.dts               kirkwood-ns2.dts                         skeleton64.dtsi
+am335x-evmsk.dts                exynos5440-ssdk5440.dts            kirkwood-ns2lite.dts                     skeleton.dtsi
+am33xx.dtsi                     ge863-pro3.dtsi                    kirkwood-ns2max.dts                      snowball.dts
+am3517-evm.dts                  highbank.dts                       kirkwood-ns2mini.dts                     socfpga_cyclone5.dts
+am3517_mt_ventoux.dts           href.dtsi                          kirkwood-nsa310.dts                      socfpga.dtsi
+animeo_ip.dts                   hrefprev60.dts                     kirkwood-openblocks_a6.dts               socfpga_vt.dts
+armada-370-db.dts               hrefv60plus.dts                    kirkwood-topkick.dts                     spear1310.dtsi
+armada-370.dtsi                 imx23.dtsi                         kirkwood-ts219-6281.dts                  spear1310-evb.dts
+armada-370-mirabox.dts          imx23-evk.dts                      kirkwood-ts219-6282.dts                  spear1340.dtsi
+armada-370-rd.dts               imx23-olinuxino.dts                kirkwood-ts219.dtsi                      spear1340-evb.dts
+armada-370-xp.dtsi              imx23-stmp378x_devb.dts            kizbox.dts                               spear13xx.dtsi
+armada-xp-db.dts                imx25.dtsi                         lpc32xx.dtsi                             spear300.dtsi
+armada-xp.dtsi                  imx25-karo-tx25.dts                Makefile                                 spear300-evb.dts
+armada-xp-gp.dts                imx25-pdk.dts                      marco.dtsi                               spear310.dtsi
+armada-xp-mv78230.dtsi          imx27-apf27dev.dts                 marco-evb.dts                            spear310-evb.dts
+armada-xp-mv78260.dtsi          imx27-apf27.dts                    mmp2-brownstone.dts                      spear320.dtsi
+armada-xp-mv78460.dtsi          imx27.dtsi                         mmp2.dtsi                                spear320-evb.dts
+armada-xp-openblocks-ax3-4.dts  imx27-pdk.dts                      mpa1600.dts                              spear320-hmi.dts
+at91-ariag25.dts                imx27-phytec-phycore.dts           omap2420.dtsi                            spear3xx.dtsi
+at91rm9200.dtsi                 imx28-apf28dev.dts                 omap2420-h4.dts                          spear600.dtsi
+at91rm9200ek.dts                imx28-apf28.dts                    omap2430.dtsi                            spear600-evb.dts
+at91sam9260.dtsi                imx28-apx4devkit.dts               omap2.dtsi                               ste-nomadik-s8815.dts
+at91sam9263.dtsi                imx28-cfa10036.dts                 omap3430-sdp.dts                         ste-nomadik-stn8815.dtsi
+at91sam9263ek.dts               imx28-cfa10037.dts                 omap34xx.dtsi                            stuib.dtsi
+at91sam9g15.dtsi                imx28-cfa10049.dts                 omap36xx.dtsi                            sun4i-a10-cubieboard.dts
+at91sam9g15ek.dts               imx28.dtsi                         omap3-beagle.dts                         sun4i-a10.dtsi
+at91sam9g20.dtsi                imx28-evk.dts                      omap3-beagle-xm.dts                      sun4i-a10-hackberry.dts
+at91sam9g20ek_2mmc.dts          imx28-m28evk.dts                   omap3-devkit8000.dts                     sun4i-a10-mini-xplus.dts
+at91sam9g20ek_common.dtsi       imx28-sps1.dts                     omap3.dtsi                               sun5i-a13.dtsi
+at91sam9g20ek.dts               imx28-tx28.dts                     omap3-evm.dts                            sun5i-a13-olinuxino.dts
+at91sam9g25.dtsi                imx31-bug.dts                      omap3-igep0020.dts                       tegra114-dalmore.dts
+at91sam9g25ek.dts               imx31.dtsi                         omap3-igep0030.dts                       tegra114.dtsi
+at91sam9g35.dtsi                imx35-pinfunc.h                    omap3-igep.dtsi                          tegra114-pluto.dts
+at91sam9g35ek.dts               imx51-apf51dev.dts                 omap3-overo.dtsi                         tegra20-colibri-512.dtsi
+at91sam9g45.dtsi                imx51-apf51.dts                    omap3-tobi.dts                           tegra20.dtsi
+at91sam9m10g45ek.dts            imx51-babbage.dts                  omap443x.dtsi                            tegra20-harmony.dts
+at91sam9n12.dtsi                imx51.dtsi                         omap4460.dtsi                            tegra20-iris-512.dts
+at91sam9n12ek.dts               imx51-pinfunc.h                    omap4.dtsi                               tegra20-medcom-wide.dts
+at91sam9x25.dtsi                imx53-ard.dts                      omap4-panda-a4.dts                       tegra20-paz00.dts
+at91sam9x25ek.dts               imx53.dtsi                         omap4-panda-common.dtsi                  tegra20-plutux.dts
+at91sam9x35.dtsi                imx53-evk.dts                      omap4-panda.dts                          tegra20-seaboard.dts
+at91sam9x35ek.dts               imx53-mba53.dts                    omap4-panda-es.dts                       tegra20-tamonten.dtsi
+at91sam9x5cm.dtsi               imx53-pinfunc.h                    omap4-sdp.dts                            tegra20-tec.dts
+at91sam9x5.dtsi                 imx53-qsb.dts                      omap4-sdp-es23plus.dts                   tegra20-trimslice.dts
+at91sam9x5ek.dtsi               imx53-smd.dts                      omap4-var-som.dts                        tegra20-ventana.dts
+atlas6.dtsi                     imx53-tqma53.dtsi                  omap5.dtsi                               tegra20-whistler.dts
+atlas6-evb.dts                  imx6dl.dtsi                        omap5-evm.dts                            tegra30-beaver.dts
+bcm11351-brt.dts                imx6dl-pinfunc.h                   orion5x.dtsi                             tegra30-cardhu-a02.dts
+bcm11351.dtsi                   imx6dl-sabreauto.dts               orion5x-lacie-ethernet-disk-mini-v2.dts  tegra30-cardhu-a04.dts
+bcm2835.dtsi                    imx6dl-sabresd.dts                 phy3250.dts                              tegra30-cardhu.dtsi
+bcm2835-rpi-b.dts               imx6dl-wandboard.dts               picoxcell-pc3x2.dtsi                     tegra30.dtsi
+ccu9540.dts                     imx6q-arm2.dts                     picoxcell-pc3x3.dtsi                     testcases
+cros5250-common.dtsi            imx6qdl.dtsi                       picoxcell-pc7302-pc3x2.dts               tny_a9260_common.dtsi
+da850.dtsi                      imx6qdl-sabreauto.dtsi             picoxcell-pc7302-pc3x3.dts               tny_a9260.dts
+da850-enbw-cmc.dts              imx6qdl-sabresd.dtsi               pm9g45.dts                               tny_a9263.dts
+da850-evm.dts                   imx6q.dtsi                         prima2.dtsi                              tny_a9g20.dts
+dbx5x0.dtsi                     imx6q-pinfunc.h                    prima2-evb.dts                           tps6507x.dtsi
+dove-cm-a510.dts                imx6q-sabreauto.dts                pxa168-aspenite.dts                      tps65217.dtsi
+dove-cubox.dts                  imx6q-sabrelite.dts                pxa168.dtsi                              tps65910.dtsi
+dove-dove-db.dts                imx6q-sabresd.dts                  pxa27x.dtsi                              twl4030.dtsi
+dove.dtsi                       imx6q-sbc6x.dts                    pxa2xx.dtsi                              twl6030.dtsi
+ea3250.dts                      imx6sl-pinfunc.h                   pxa3xx.dtsi                              u9540.dts
+ecx-2000.dts                    include                            pxa910-dkb.dts                           usb_a9260_common.dtsi
+ecx-common.dtsi                 integratorap.dts                   pxa910.dtsi                              usb_a9260.dts
+elpida_ecb240abacn.dtsi         integratorcp.dts                   qcom                                     usb_a9263.dts
+emev2.dtsi                      integrator.dtsi                    r8a73a4-ape6evm.dts                      usb_a9g20-dab-mmx.dtsi
+emev2-kzm9d.dts                 kirkwood-6281.dtsi                 r8a73a4.dtsi                             usb_a9g20.dts
+ethernut5.dts                   kirkwood-6282.dtsi                 r8a7740-armadillo800eva.dts              versatile-ab.dts
+evk-pro3.dts                    kirkwood-98dx4122.dtsi             r8a7740.dtsi                             versatile-pb.dts
+exynos4210.dtsi                 kirkwood-cloudbox.dts              r8a7778-bockw.dts                        vexpress-v2m.dtsi
+exynos4210-origen.dts           kirkwood-dns320.dts                r8a7778.dtsi                             vexpress-v2m-rs1.dtsi
+exynos4210-pinctrl.dtsi         kirkwood-dns325.dts                r8a7779.dtsi                             vexpress-v2p-ca15_a7.dts
+exynos4210-smdkv310.dts         kirkwood-dnskw.dtsi                r8a7779-marzen-reference.dts             vexpress-v2p-ca15-tc1.dts
+exynos4210-trats.dts            kirkwood-dockstar.dts              r8a7790.dtsi                             vexpress-v2p-ca5s.dts
+exynos4210-universal_c210.dts   kirkwood-dreamplug.dts             r8a7790-lager.dts                        vexpress-v2p-ca9.dts
+exynos4212.dtsi                 kirkwood.dtsi                      sama5d31ek.dts                           vt8500-bv07.dts
+exynos4412.dtsi                 kirkwood-goflexnet.dts             sama5d33ek.dts                           vt8500.dtsi
+exynos4412-odroidx.dts          kirkwood-guruplug-server-plus.dts  sama5d34ek.dts                           wm8505.dtsi
+exynos4412-origen.dts           kirkwood-ib62x0.dts                sama5d35ek.dts                           wm8505-ref.dts
+exynos4412-smdk4412.dts         kirkwood-iconnect.dts              sama5d3.dtsi                             wm8650.dtsi
+exynos4.dtsi                    kirkwood-iomega_ix2_200.dts        sama5d3xcm.dtsi                          wm8650-mid.dts
+exynos4x12.dtsi                 kirkwood-is2.dts                   sama5d3xdm.dtsi                          wm8850.dtsi
+exynos4x12-pinctrl.dtsi         kirkwood-km_kirkwood.dts           sama5d3xmb.dtsi                          wm8850-w70v2.dts
+exynos5250-arndale.dts          kirkwood-lschlv2.dts               samsung_k3pe0e000b.dtsi                  xenvm-4.2.dts
+exynos5250.dtsi                 kirkwood-lsxhl.dts                 sh7372.dtsi                              zynq-7000.dtsi
+exynos5250-pinctrl.dtsi         kirkwood-lsxl.dtsi                 sh7372-mackerel.dts                      zynq-zc702.dts
+exynos5250-smdk5250.dts         kirkwood-mplcec4.dts               sh73a0.dtsi
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/kernel/arch/arm/boot/dts$ cd qcom/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/kernel/arch/arm/boot/dts/qcom$ la
+apq8016-mtp.dts                                        msm8226-camera-sensor-qrd.dtsi         msm8936-coresight.dtsi
+apq8016-mtp-smb1360.dts                                msm8226-coresight.dtsi                 msm8936-cpu.dtsi
+apq8026-v1-cdp.dts                                     msm8226.dtsi                           msm8936.dtsi
+apq8026-v1.dtsi                                        msm8226-fluid.dts                      msm8936-mtp.dts
+apq8026-v1-mtp.dts                                     msm8226-gpu.dtsi                       msm8936-mtp-smb1360.dts
+apq8026-v1-w-cdp.dts                                   msm8226-iommu-domains.dtsi             msm8936-mtp-wcd9306.dts
+apq8026-v1-w-mtp.dts                                   msm8226-iommu.dtsi                     msm8936-pm.dtsi
+apq8026-v1-xpm.dts                                     msm8226-ion.dtsi                       msm8936-qrd-skuk.dts
+apq8026-v2-1080p-cdp.dts                               msm8226-mdss.dtsi                      msm8936-smem.dtsi
+apq8026-v2-1080p-mtp.dts                               msm8226-mdss-panels.dtsi               msm8936-smp2p.dtsi
+apq8026-v2-320p-w-cdp.dts                              msm8226-memory.dtsi                    msm8939-audio-external_codec.dtsi
+apq8026-v2-320p-w-mtp.dts                              msm8226-pinctrl.dtsi                   msm8939-audio-internal_codec.dtsi
+apq8026-v2-720p-cdp.dts                                msm8226-qrd.dtsi                       msm8939-bus.dtsi
+apq8026-v2-720p-mtp.dts                                msm8226-qrd-skuf.dtsi                  msm8939-camera.dtsi
+apq8026-v2.dtsi                                        msm8226-qseecom.dtsi                   msm8939-camera-sensor-cdp.dtsi
+apq8026-v2-xpm.dts                                     msm8226-regulator.dtsi                 msm8939-camera-sensor-mtp.dtsi
+apq8074-dragonboard.dtsi                               msm8226-sharedmem.dtsi                 msm8939-camera-sensor-qrd.dtsi
+apq8074-v1.dtsi                                        msm8226-sim.dts                        msm8939-cdp.dts
+apq8074-v1-ion.dtsi                                    msm8226-smp2p.dtsi                     msm8939-cdp.dtsi
+apq8074-v2.0-1-cdp.dts                                 msm8226-v1-cdp.dts                     msm8939-cdp-jdi-a216-fhd.dts
+apq8074-v2.0-1-dragonboard.dts                         msm8226-v1.dtsi                        msm8939-cdp-jdi.dts
+apq8074-v2.0-1.dtsi                                    msm8226-v1-mtp.dts                     msm8939-common.dtsi
+apq8074-v2.0-1-ion.dtsi                                msm8226-v1-pm.dtsi                     msm8939-coresight.dtsi
+apq8074-v2.0-1-liquid.dts                              msm8226-v1-qrd-dvt.dts                 msm8939-cpu.dtsi
+apq8074-v2.2-cdp.dts                                   msm8226-v1-qrd-evt.dts                 msm8939.dtsi
+apq8074-v2.2-dragonboard.dts                           msm8226-v1-qrd-skuf.dts                msm8939-gpu.dtsi
+apq8074-v2.2.dtsi                                      msm8226-v1-qrd-skuf-pvt.dts            msm8939-iommu-domains.dtsi
+apq8074-v2.2-ion.dtsi                                  msm8226-v1-w-cdp.dts                   msm8939-iommu.dtsi
+apq8074-v2.2-liquid.dts                                msm8226-v1-w-mtp.dts                   msm8939-ion.dtsi
+apq8084-bus.dtsi                                       msm8226-v2-1080p-cdp.dts               msm8939-ipcrouter.dtsi
+apq8084-camera.dtsi                                    msm8226-v2-1080p-mtp.dts               msm8939-mdss.dtsi
+apq8084-camera-sensor-cdp.dtsi                         msm8226-v2-320p-w-cdp.dts              msm8939-mdss-pll.dtsi
+apq8084-camera-sensor-liquid.dtsi                      msm8226-v2-320p-w-mtp.dts              msm8939-mtp.dts
+apq8084-camera-sensor-mtp.dtsi                         msm8226-v2-720p-cdp.dts                msm8939-mtp.dtsi
+apq8084-camera-sensor-sbc.dtsi                         msm8226-v2-720p-mtp.dts                msm8939-mtp-jdi.dts
+apq8084-cdp.dtsi                                       msm8226-v2.dtsi                        msm8939-mtp-smb1360.dts
+apq8084-coresight.dtsi                                 msm8226-v2-pm.dtsi                     msm8939-mtp-wcd9306.dts
+apq8084.dtsi                                           msm8226-v2-qrd-dvt.dts                 msm8939-pinctrl.dtsi
+apq8084-gpu.dtsi                                       msm8226-v2-qrd-evt.dts                 msm8939-pm.dtsi
+apq8084-iommu-domains.dtsi                             msm8226-v2-qrd-pvt.dts                 msm8939-qrd.dtsi
+apq8084-iommu.dtsi                                     msm8226-v2-qrd-skuf.dts                msm8939-qrd-skuk.dts
+apq8084-ion.dtsi                                       msm8226-v2-qrd-skuf-pvt.dts            msm8939-qrd-skuk.dtsi
+apq8084-ipcrouter.dtsi                                 msm8226-w-ion.dtsi                     msm8939-qrd-skul.dts
+apq8084-liquid.dtsi                                    msm8226-w-memory.dtsi                  msm8939-qrd-skul.dtsi
+apq8084-mdss.dtsi                                      msm8226-w-qseecom.dtsi                 msm8939-regulator.dtsi
+apq8084-mdss-panels.dtsi                               msm8226-w-sharedmem.dtsi               msm8939-rumi.dts
+apq8084-mtp.dtsi                                       msm8610-bus.dtsi                       msm8939-sim.dts
+apq8084-old-pwr-grid.dtsi                              msm8610-camera.dtsi                    msm8939-smem.dtsi
+apq8084-old-pwr-grid-smb349-cdp.dts                    msm8610-camera-sensor-cdp-mtp.dtsi     msm8939-smp2p.dtsi
+apq8084-old-pwr-grid-smb349-mtp.dts                    msm8610-cdp.dtsi                       msm8960-cdp.dts
+apq8084-pinctrl.dtsi                                   msm8610-coresight.dtsi                 msm8974-bus.dtsi
+apq8084-pm.dtsi                                        msm8610.dtsi                           msm8974-camera.dtsi
+apq8084-regulator.dtsi                                 msm8610-gpu.dtsi                       msm8974-camera-sensor-cdp.dtsi
+apq8084-sbc.dtsi                                       msm8610-iommu-domains.dtsi             msm8974-camera-sensor-dragonboard.dtsi
+apq8084-smp2p.dtsi                                     msm8610-ion.dtsi                       msm8974-camera-sensor-fluid.dtsi
+apq8084-taiko-i2s-codec.dtsi                           msm8610-mdss.dtsi                      msm8974-camera-sensor-liquid.dtsi
+apq8084-v1.0-old-pwr-grid-liquid.dts                   msm8610-mdss-panels.dtsi               msm8974-camera-sensor-mtp.dtsi
+apq8084-v1.0-old-pwr-grid-mdm9x35-alt-cdp.dts          msm8610-mtp.dtsi                       msm8974-cdp.dtsi
+apq8084-v1.0-old-pwr-grid-smb1357-cdp.dts              msm8610-pinctrl.dtsi                   msm8974-clock.dtsi
+apq8084-v1.0-old-pwr-grid-smb1357-mdm9x35-alt-rcm.dts  msm8610-qrd-camera-sensor.dtsi         msm8974-coresight.dtsi
+apq8084-v1.0-old-pwr-grid-smb1357-mdm9x35-cdp.dts      msm8610-qrd.dtsi                       msm8974.dtsi
+apq8084-v1.0-old-pwr-grid-smb1357-mdm9x35-mtp.dts      msm8610-qrd-skuaa.dtsi                 msm8974-fluid.dtsi
+apq8084-v1.0-old-pwr-grid-smb1357-mtp.dts              msm8610-qrd-skuab.dtsi                 msm8974-gpu.dtsi
+apq8084-v1.0-old-pwr-grid-smb1359-mdm9x35-alt-mtp.dts  msm8610-regulator.dtsi                 msm8974-ion.dtsi
+apq8084-v1.1.dtsi                                      msm8610-rumi.dts                       msm8974-ipcrouter.dtsi
+apq8084-v1.1-liquid.dts                                msm8610-sim.dts                        msm8974-leds.dtsi
+apq8084-v1.1-mdm9x35-alt-cdp.dts                       msm8610-smp2p.dtsi                     msm8974-liquid.dtsi
+apq8084-v1.1-old-pwr-grid-liquid.dts                   msm8610-v1-cdp.dts                     msm8974-mdss.dtsi
+apq8084-v1.1-old-pwr-grid-mdm9x35-alt-cdp.dts          msm8610-v1.dtsi                        msm8974-mdss-panels.dtsi
+apq8084-v1.1-old-pwr-grid-smb1357-cdp.dts              msm8610-v1-mtp.dts                     msm8974-mdss-pll.dtsi
+apq8084-v1.1-old-pwr-grid-smb1357-mdm9x35-alt-rcm.dts  msm8610-v1-pm.dtsi                     msm8974-mtp.dtsi
+apq8084-v1.1-old-pwr-grid-smb1357-mdm9x35-cdp.dts      msm8610-v1-qrd-skuaa.dts               msm8974-pinctrl.dtsi
+apq8084-v1.1-old-pwr-grid-smb1357-mdm9x35-mtp.dts      msm8610-v1-qrd-skuab.dts               msm8974pro-ab-pm8941-cdp.dts
+apq8084-v1.1-old-pwr-grid-smb1357-mtp.dts              msm8610-v1-qrd-skuab-dvt2.dts          msm8974pro-ab-pm8941.dtsi
+apq8084-v1.1-old-pwr-grid-smb1359-mdm9x35-alt-mtp.dts  msm8610-v2-cdp.dts                     msm8974pro-ab-pm8941-fluid.dts
+apq8084-v1.1-sbc.dts                                   msm8610-v2.dtsi                        msm8974pro-ab-pm8941-liquid.dts
+apq8084-v1.1-smb1357-cdp.dts                           msm8610-v2-mtp.dts                     msm8974pro-ab-pm8941-mtp.dts
+apq8084-v1.1-smb1357-mdm9x35-alt-rcm.dts               msm8610-v2-pm.dtsi                     msm8974pro-ac-pm8941-cdp.dts
+apq8084-v1.1-smb1357-mdm9x35-cdp.dts                   msm8610-v2-qrd-skuaa.dts               msm8974pro-ac-pm8941.dtsi
+apq8084-v1.1-smb1357-mdm9x35-mtp.dts                   msm8610-v2-qrd-skuab.dts               msm8974pro-ac-pm8941-liquid.dts
+apq8084-v1.1-smb1357-mtp.dts                           msm8610-v2-qrd-skuab-dvt2.dts          msm8974pro-ac-pm8941-mtp.dts
+apq8084-v1.1-smb1359-mdm9x35-alt-mtp.dts               msm8612-qrd-camera-sensor.dtsi         msm8974pro-ac-pma8084.dtsi
+apq8094-dragonboard.dtsi                               msm8660-surf.dts                       msm8974pro-ac-pma8084-pm8941.dtsi
+apq8094-v1-cdp.dts                                     msm8909-1gb-cdp.dts                    msm8974pro-ac-pma8084-pm8941-mtp.dts
+apq8094-v1-dragonboard.dts                             msm8909-1gb-mtp.dts                    msm8974pro.dtsi
+apq8094-v1.dtsi                                        msm8909-1gb-qrd-skua.dts               msm8974pro-ion.dtsi
+apq8094-v1-fluid.dts                                   msm8909-1gb-qrd-skuc.dts               msm8974pro-pinctrl.dtsi
+apq8094-v1-liquid.dts                                  msm8909-1gb-qrd-skue.dts               msm8974pro-pm8941.dtsi
+apq8094-v1-mtp.dts                                     msm8909-1gb-rcm.dts                    msm8974pro-pm8994.dtsi
+apq8094-v2-cdp.dts                                     msm8909-512mb-mtp-smb1360.dts          msm8974pro-pma8084.dtsi
+apq8094-v2.dtsi                                        msm8909-bus.dtsi                       msm8974pro-pma8084-mtp.dtsi
+apq8094-v2-fluid.dts                                   msm8909-camera.dtsi                    msm8974pro-pma8084-regulator.dtsi
+apq8094-v2-liquid.dts                                  msm8909-camera-sensor-cdp.dtsi         msm8974pro-pm.dtsi
+apq8094-v2-mtp.dts                                     msm8909-camera-sensor-mtp.dtsi         msm8974-regulator.dtsi
+batterydata-itech-3000mah.dtsi                         msm8909-camera-sensor-skua.dtsi        msm8974-rumi.dtsi
+batterydata-itech-3020mah.dtsi                         msm8909-camera-sensor-skuc.dtsi        msm8974-sim.dtsi
+batterydata-mtp-3000mah.dtsi                           msm8909-camera-sensor-skue.dtsi        msm8974-smp2p.dtsi
+batterydata-palladium.dtsi                             msm8909-cdp.dts                        msm8974-v1-cdp.dts
+batterydata-qrd-4v2-1300mah.dtsi                       msm8909-cdp.dtsi                       msm8974-v1.dtsi
+batterydata-qrd-4v2-1800mah.dtsi                       msm8909-coresight.dtsi                 msm8974-v1-fluid.dts
+batterydata-qrd-4v2-2000mah.dtsi                       msm8909.dtsi                           msm8974-v1-iommu-domains.dtsi
+batterydata-qrd-4v2-2200mah.dtsi                       msm8909-gpu.dtsi                       msm8974-v1-iommu.dtsi
+batterydata-qrd-4v35-2000mah.dtsi                      msm8909-gpu-qhd.dtsi                   msm8974-v1-liquid.dts
+batterydata-qrd-4v35-2500mah.dtsi                      msm8909-iommu-domains.dtsi             msm8974-v1-mtp.dts
+batterydata-qrd-skua-4v35-2000mah.dtsi                 msm8909-iommu.dtsi                     msm8974-v1-pm.dtsi
+batterydata-qrd-skuc-4v2-2000mah.dtsi                  msm8909-ion.dtsi                       msm8974-v1-rumi.dts
+batterydata-qrd-skue-4v35-2000mah.dtsi                 msm8909-ipcrouter.dtsi                 msm8974-v1-sim.dts
+batterydata-qrd-skuh-4v35-2000mah.dtsi                 msm8909-mdss.dtsi                      msm8974-v2.0-1-cdp.dts
+batterydata-qrd-skui-4v35-2200mah.dtsi                 msm8909-mdss-pll.dtsi                  msm8974-v2.0-1.dtsi
+batterydata-qrd-skuic-4v35-1850mah.dtsi                msm8909-memory.dtsi                    msm8974-v2.0-1-fluid.dts
+batterydata-qrd-skul-4v4-2920mah.dtsi                  msm8909-mtp.dts                        msm8974-v2.0-1-liquid.dts
+dsi-panel-generic-720p-cmd.dtsi                        msm8909-mtp.dtsi                       msm8974-v2.0-1-mtp.dts
+dsi-panel-hx8379a-fwvga-skua-video.dtsi                msm8909-mtp-smb1360.dts                msm8974-v2.2-cdp.dts
+dsi-panel-hx8379a-fwvga-video.dtsi                     msm8909-pinctrl.dtsi                   msm8974-v2.2.dtsi
+dsi-panel-hx8379a-truly-fwvga-video.dtsi               msm8909-pm8909-cdp.dtsi                msm8974-v2.2-fluid.dts
+dsi-panel-hx8379a-wvga-video.dtsi                      msm8909-pm8909.dtsi                    msm8974-v2.2-liquid.dts
+dsi-panel-hx8379c-fwvga-video.dtsi                     msm8909-pm8909-mtp.dtsi                msm8974-v2.2-mtp.dts
+dsi-panel-hx8389b-qhd-video.dtsi                       msm8909-pm8909-pm.dtsi                 msm8974-v2.dtsi
+dsi-panel-hx8394a-720p-video.dtsi                      msm8909-pm8916-1gb-qhd-rcm.dts         msm8974-v2-iommu-domains.dtsi
+dsi-panel-hx8394d-720p-video.dtsi                      msm8909-pm8916-1gb-rcm.dts             msm8974-v2-iommu.dtsi
+dsi-panel-hx8394d-qhd-video.dtsi                       msm8909-pm8916-camera.dtsi             msm8974-v2-pm.dtsi
+dsi-panel-ili9806e-fwvga-video.dtsi                    msm8909-pm8916-camera-sensor-cdp.dtsi  msm8992.dtsi
+dsi-panel-innolux-720p-video.dtsi                      msm8909-pm8916-cdp.dts                 msm8992-gpu.dtsi
+dsi-panel-jdi-1080p-video.dtsi                         msm8909-pm8916-cdp.dtsi                msm8992-iommu-domains.dtsi
+dsi-panel-jdi-4k-dualmipi0-video.dtsi                  msm8909-pm8916.dtsi                    msm8992-iommu.dtsi
+dsi-panel-jdi-4k-dualmipi1-video.dtsi                  msm8909-pm8916-mtp.dts                 msm8992-ion.dtsi
+dsi-panel-jdi-a216-fhd-video.dtsi                      msm8909-pm8916-mtp.dtsi                msm8992-mdss.dtsi
+dsi-panel-jdi-dualmipi0-cmd.dtsi                       msm8909-pm8916-mtp-smb1360.dts         msm8992-pinctrl.dtsi
+dsi-panel-jdi-dualmipi0-video.dtsi                     msm8909-pm8916-pm.dtsi                 msm8992-regulator.dtsi
+dsi-panel-jdi-dualmipi1-cmd.dtsi                       msm8909-pm8916-qhd-rcm.dts             msm8992-rumi.dts
+dsi-panel-jdi-dualmipi1-video.dtsi                     msm8909-pm8916-qrd.dtsi                msm8992-sim.dts
+dsi-panel-jdi-fhd-video.dtsi                           msm8909-pm8916-qrd-skut.dtsi           msm8992-smp2p.dtsi
+dsi-panel-nt35521-720p-video.dtsi                      msm8909-pm8916-qrd-skut-dvt.dts        msm8994-bus.dtsi
+dsi-panel-nt35521-wxga-video.dtsi                      msm8909-pm8916-qrd-skut-evt.dts        msm8994-camera.dtsi
+dsi-panel-nt35590-720p-cmd.dtsi                        msm8909-qhd-cdp.dts                    msm8994-camera-sensor-cdp.dtsi
+dsi-panel-nt35590-720p-video.dtsi                      msm8909-qhd-rcm.dts                    msm8994-camera-sensor-liquid.dtsi
+dsi-panel-nt35590-qvga-cmd.dtsi                        msm8909-qrd.dtsi                       msm8994-camera-sensor-mtp.dtsi
+dsi-panel-nt35596-1080p-skuk-video.dtsi                msm8909-qrd-skua.dts                   msm8994-cdp.dtsi
+dsi-panel-nt35596-1080p-video.dtsi                     msm8909-qrd-skua.dtsi                  msm8994-coresight-v1.dtsi
+dsi-panel-orise-720p-video.dtsi                        msm8909-qrd-skuc.dts                   msm8994-coresight-v2.dtsi
+dsi-panel-otm1283a-720p-video.dtsi                     msm8909-qrd-skuc.dtsi                  msm8994.dtsi
+dsi-panel-otm8018
+fsm9010.dtsi                                           msm8916-cdp-smb1360.dts                msm8994-v1.dtsi
+fsm9010-pinctrl.dtsi                                   msm8916-coresight.dtsi                 msm8994-v1-fluid.dts
+fsm9010-rumi.dtr.dtsi
+mdm9630-ion.dtsi                                       msm8916-qrd-skuid.dts                  msm-pm8110.dtsi
+mdm9630-mtp.dtsi                                       msm8916-qrd-skuid.dtsi                 msm-pm8110-rpm-regulator.dtsi
+mdm9630-pinctrl.dtsi                                   msm8916-qrd-skui.dts                   msm-pm8226.dtsi
+mdm9630-pm.dtsi                                        msm8916-qrd-skui.dtsi                  msm-pm8226-rpm-regulator.dtsi
+mdm9630-regulator.dtsi                                 msm8916-qrd-skut1.dts                  msm-pm8841.dtsi
+mdm9630-sim.dts             
+mdmferrum-cdp.dtsi                                     msm8926-v1-qrd.dts                     msm-rdbg.dtsi
+mdmferrum.dtsi                                         msm8926-v1-qrd-skug.dts                msmtellurium.dtsi
+mdmferrum-mtp.dts                                      msm8926-v1-qrd-skug-pvt.dts            msmtellurium-ion.dtsi
+mdmferrum-mtp.dtsi   
+msm8226-1080p-cdp.dtsi                                 msm8929-mtp.dts                        msmzirc-sim.dts
+msm8226-1080p-mtp.dtsi                                 msm8929-mtp-jdi-smb1360.dts            msmzirc-smp2p.dtsi
+msm8226-720p-cdp.dtsi                                  msm8929-mtp-smb1360.dts                qpic-panel-hx-hvga.dtsi
+msm8226-720p-mtp.dtsi                                  msm8929-mtp-wcd9306-smb1360.dts        qpic-panel-ili-qvga.dtsi
+msm8226-bus.dtsi                                       msm8929-qrd-skulb.dts                  skeleton64.dtsi
+msm8226-camera.dtsi                                    msm8929-qrd-skul.dts                   skeleton.dtsi
+msm8226-camera-sensor-cdp.dtsi                         msm8936-cdp.dts
+msm8226-camera-sensor-mtp.dtsi                         msm8936-cdp-smb1360.dts
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/kernel/arch/arm/boot/dts/qcom$ cd la0908p1/
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/kernel/arch/arm/boot/dts/qcom/la0908p1$ la
+batterydata-palladium.dtsi             msm8909.dtsi                msm8909-ipcrouter.dtsi  msm8909-pm8909.dtsi      msm-gdsc-8916.dtsi
+dsi-panel-hx8394a-720p-video_tcl.dtsi  msm8909-goso-la0908p1.dts   msm8909-mdss.dtsi       msm8909-pm8909-mtp.dtsi  msm-iommu-v2.dtsi
+la0908p1-touchsceen.dtsi               msm8909-gpu.dtsi            msm8909-mdss-pll.dtsi   msm8909-pm8909-pm.dtsi   msm-pm8909.dtsi
+msm8909-bus.dtsi                       msm8909-iommu-domains.dtsi  msm8909-memory.dtsi     msm8909-regulator.dtsi   msm-pm8909-rpm-regulator.dtsi
+msm8909-camera.dtsi                    msm8909-iommu.dtsi          msm8909-mtp.dtsi        msm8909-sensors.dtsi     skeleton64.dtsi
+msm8909-coresight.dtsi                 msm8909-ion.dtsi            msm8909-pinctrl.dtsi    msm8909-smp2p.dtsi
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/kernel/arch/arm/boot/dts/qcom/la0908p1$ vi msm8909-mtp.dtsi 
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/kernel/arch/arm/boot/dts/qcom/la0908p1$ la
+batterydata-palladium.dtsi             msm8909.dtsi                msm8909-ipcrouter.dtsi  msm8909-pm8909.dtsi      msm-gdsc-8916.dtsi
+dsi-panel-hx8394a-720p-video_tcl.dtsi  msm8909-goso-la0908p1.dts   msm8909-mdss.dtsi       msm8909-pm8909-mtp.dtsi  msm-iommu-v2.dtsi
+la0908p1-touchsceen.dtsi               msm8909-gpu.dtsi            msm8909-mdss-pll.dtsi   msm8909-pm8909-pm.dtsi   msm-pm8909.dtsi
+msm8909-bus.dtsi                       msm8909-iommu-domains.dtsi  msm8909-memory.dtsi     msm8909-regulator.dtsi   msm-pm8909-rpm-regulator.dtsi
+msm8909-camera.dtsi                    msm8909-iommu.dtsi          msm8909-mtp.dtsi        msm8909-sensors.dtsi     skeleton64.dtsi
+msm8909-coresight.dtsi                 msm8909-ion.dtsi            msm8909-pinctrl.dtsi    msm8909-smp2p.dtsi
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/kernel/arch/arm/boot/dts/qcom/la0908p1$ vi la0908p1-touchsceen.dtsi 
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/kernel/arch/arm/boot/dts/qcom/la0908p1$ vi la0908p1-touchsceen.dtsi 
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/kernel/arch/arm/boot/dts/qcom/la0908p1$ 
+
+ push
+ 644
+
+
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe/E1/resource/system/usr/keylayout$ adb shell getevent 
+add device 1: /dev/input/event6
+  name:     "msm8909-snd-card Headset Jack"
+add device 2: /dev/input/event5
+  name:     "msm8909-snd-card Button Jack"
+add device 3: /dev/input/event2
+  name:     "virtual_touch"
+add device 4: /dev/input/event1
+  name:     "Goodix-CTP"
+add device 5: /dev/input/event0
+  name:     "qpnp_pon"
+could not get driver version for /dev/input/mice, Not a typewriter
+add device 6: /dev/input/event4
+  name:     "gpio-keys"
+add device 7: /dev/input/event3
+  name:     "accelerometer"
+
+
+
+
+Fixed:updata lcd otm1287a config for v16.
+
+remove some useless debug macro for la0908.
+
+ Add lcd and tp (hx8394a,gt9147) for la0908.
+
+
+ git push caf HEAD:refs/caf/msm8909-1138
+
+
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe/E1$ git branch -a
+* lcd
+  remotes/m/msm8909 -> origin/master
+  remotes/origin/master
+lcf@lcfubuntu:~/zgjwork/commsm/qmss11-8909/LINUX/android/vendor/GlocalMe/E1$ git push origin HEAD:refs/for/master
+Counting objects: 24, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (10/10), 967 bytes | 0 bytes/s, done.
+Total 10 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3)
+remote: Processing changes: new: 1, refs: 1, done    
+remote: 
+remote: New Changes:
+remote:   http://192.168.180.185:8081/16063
+remote: 
+To ssh://192.168.180.185:29418/goso-development/projects/GlocalMe/E1.git
+ * [new branch]      HEAD -> refs/for/master
+
+scp -p -P 29418 zz@192.168.180.185:hooks/commit-msg .git/hooks/ 
+
+
+Add switch driver code to support dual-panels.
+
+

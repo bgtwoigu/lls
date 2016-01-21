@@ -1,0 +1,42 @@
+  adb reboot booltoader
+ 2160  fastboot oem deivce-info
+ 2161  fastboot oem device-info
+ 2162  lsusb
+ 2163  adb reboot bootloader
+ 2164  fastboot oem device-info
+ 2165  fastbootadb reboot bootloader
+ 2166  fastboot oem device-info
+ 2167  fastboot oem disable-charger-screen
+ 2168  fastboot oem device-info
+ 2169  fastboot reboot
+ 2170  adb reboot bootloader
+ 2171  lsu7
+ 2172  lsusb
+ 2173  fastboot oem device-info
+ 2174  fastboot reboot
+ 2175  history
+
+
+ 2221  cd system/core/
+ 2222  la
+ 2223  vi init/init.c
+ 2224  grep -r engineer-mode .
+ 2225  vi ./rootdir/init.rc
+ 2226  grep -r chmod_partition .
+ 2227  vi ./init/builtins.c
+ 2228  cd ../..
+ 2229  vi packages/apps/UsbPortSwitcher/jni/Android.mk
+ 2230  vi packages/apps/UsbPortSwitcher/jni/device_info.c
+ 2231  cd frameworks/base/
+ 2232  grep -r engineer core/res/
+ 2233  vi core/res/res/values/config.xml
+ 2234  cd ../..
+ 2235  cd system/core/
+ 2236  la
+ 2237  vi init/property_service.c
+ 2238  adb logcat | grep UsbPort
+ 2239  cd .././
+ 2240  cd ..
+ 2241  cd packages/apps/UsbPortSwitcher/
+ 2242  la
+

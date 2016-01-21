@@ -1,0 +1,33 @@
+E人E本
+
+由 董 焕明 在 3 个月 之前添加
+
+repo init -u ssh://192.168.180.185:29418/ereneben/platform/manifest.git -b msm8x74 -m msm8x74-4270.xml --repo-url=ssh://192.168.180.185:29418/qct/repo.git
+time repo sync -j2 -q
+
+评论
+由 熊 卫波 在 大约一个月 之前添加
+
+k8a 项目
+
+modem
+git clone ssh://192.168.180.185:29418/amss201-8x74.git -b msm8x74-2163
+
+android
+cd 到LINUX/android
+repo init -u ssh://192.168.180.185:29418/qct/goso/manifest.git -b msm8x74 -m msm8x74-2163-ebens.xml --repo-url=ssh://192.168.180.185:29418/qct/repo.git
+
+repo sync -j4
+
+添加评论
+
+
+
+
+8909 新平台基线发布,
+代码路径：
+1. git clone ssh://192.168.180.185:29418/qmss11-8909.git -b msm8909-1117
+
+2. cd LINUX/android
+3. repo init -u ssh://192.168.180.185:29418/qct/goso/manifest.git -b msm8909 -m msm8909-1117.xml --repo-url=ssh://192.168.180.185:29418/qct/repo.git
+1117 的换成1138

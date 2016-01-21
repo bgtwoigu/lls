@@ -1,0 +1,599 @@
+1                        Desktop            .gphoto           kmsg6              old.id                  test                .viminfz.tmp
+.adobe                   digailuhuanxing    .gstreamer-0.10   kmsg7              Pictures                test.txt~           .vim_old
+.android                 digailuhuanxing~   .gvfs             kmsg8              .profile                .thunderbird        .vimrc
+ARM_Compiler_5           .dmrc              .ICEauthority     kmsg9              Public                  touchscreen         .vimrc_old
+.bash_history            Documents          id_rsa.pub        kmsggggg           Qualcomm                txt.patch~          VirtualBox VMs
+.bash_logout             Downloads          .InstallAnywhere  lcfwork2015-01-24  .repoconfig             Untitle             .wine
+.bashrc                  examples.desktop   .kchmviewer       .lesshst           .repopickle_.gitconfig  Untitle~            work
+.bashrc~                 ft5x06_ts.kl       .kde              lib                .rnd                    Untitled Document~  .Xauthority
+bin                      .gconf             kmsg10            .local             Sensors.zip             Untitled Folder     .xinput.d
+board-8974-gpiomux.c     .gerritcodereview  kmsg11            logcathhh          Source Insight          Videos              .xinputrc
+.cache                   .gitconfig         kmsg13            ma6174             .ssh                    .vim                .xsession-errors
+cdword.sh                .gitconfig~        kmsg14            .macromedia        study_life              .vim-fuf-data       .xsession-errors.old
+.compiz                  .gnome2            kmsg15            .mozilla           .sunpinyin              .viminfo            xxxx
+.com.zerog.registry.xml  .gnome2_private    kmsg2             Music              sys                     .viminfo.tmp        zgjwork
+.config                  .goldendict        kmsg4             mylogtxt2          tags                    .viminfx.tmp
+.dbus                    gosomowork         kmsg5             mylogtxt2~         Templates               .viminfy.tmp
+lcf@lcfubuntu:~$ pwd
+/home/lcf
+lcf@lcfubuntu:~$ cd zgjwork/
+code_save/  commsm/     image_save/ machtest/   readdir/    
+lcf@lcfubuntu:~$ cd zgjwork/
+lcf@lcfubuntu:~/zgjwork$ la
+code_save  commsm  image_save  machtest  readdir  repo
+lcf@lcfubuntu:~/zgjwork$ cd commsm/
+lcf@lcfubuntu:~/zgjwork/commsm$ la
+amss201-8x74  amss8974_402  qmss11-8909  qmss21-8939  secsource
+lcf@lcfubuntu:~/zgjwork/commsm$ cd amss8974_402/
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402$ la
+about.html  boot_images   common        debug_image    .git            .gitignore  known_issues.xls  lpass_proc  rpm_proc          wcnss_proc
+adsp_proc   build_all.sh  contents.xml  fixed_crs.xls  .gitattributes  goso        LINUX             modem_proc  trustzone_images
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402$ cd LINUX/android/
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android$ cd system/core/
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/system/core$ la
+adb           fastboot    healthd        libion           libpixelflinger  libusbhost     logd                    README   ThirdPartyProject.prop
+adf           fastbootd   include        liblog           libprocessgroup  libutils       logwrapper              reboot   toolbox
+Android.mk    fs_mgr      init           libmemtrack      libsparse        libziparchive  mkbootimg               rootdir
+CleanSpec.mk  .git        libbacktrace   libmincrypt      libsuspend       libzipfile     MODULE_LICENSE_APACHE2  run-as
+cpio          .gitignore  libcutils      libnativebridge  libsync          lmkd           netcfg                  sdcard
+debuggerd     gpttool     libdiskconfig  libnetutils      libsysutils      logcat         NOTICE                  tags
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/system/core$ cd ../../
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android$ cd device/qcom/sepolicy/
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/device/qcom/sepolicy$ git log
+commit ce0c930fcbb7c9b79aa11ea412cd26e8a55a1515
+Author: ye ruiyong <yeruiyong@gosomo.cn>
+Date:   Tue Oct 27 13:54:42 2015 +0800
+
+    Fixed:Allow to access sys led node.
+          http://192.168.180.176:3000/issues/6737
+    
+    Change-Id: I0322b15722b979093f96e42296e9b3c83524f37f
+
+commit d0df2661920d6073684d1ea5c685c56541f1bd30
+Author: kesun <kesun.zhou@gosomo.cn>
+Date:   Mon May 25 15:05:48 2015 +0800
+
+    Fixed: add rw_file_perms for mmi-test.
+    
+    Change-Id: If9147cd238767458ec6bf622c32d8f9ad9b1c90e
+
+commit b8d4e3f387761d106892a08daed2710f3fae092c
+Merge: f38bf4c 6975b30
+Author: Linux Build Service Account <lnxbuild@localhost>
+Date:   Sat Mar 21 23:14:53 2015 -0700
+
+    Merge AU_LINUX_ANDROID_LA.BF.1.1.1_RB1.05.01.00.042.025 on remote branch
+    
+    Change-Id: I9e00b5eda99e6a9bc6683f1136b4532415068d7a
+
+commit f38bf4cf6e466a4267a395f6d89b9db735d87916
+Merge: 0f19d1b 9f66f8a
+Author: Linux Build Service Account <lnxbuild@localhost>
+Date:   Fri Mar 20 14:01:12 2015 -0700
+
+    Merge "cnd: Allow nims to be removed"
+
+commit 6975b30ec52142fe68c43338f0d19afa290aef7d
+Merge: 0f19d1b db9e321
+Author: Linux Build Service Account <lnxbuild@localhost>
+Date:   Fri Mar 20 00:37:54 2015 -0700
+
+    Merge AU_LINUX_ANDROID_LA.BF.1.1.1_RB1.05.00.02.042.024 on remote branch
+    
+    Change-Id: Ic76baaf94b60855f3b3413f1cb519c2a860730f1
+
+commit 9f66f8af493919cb6608d05d345c72e30cc39c72
+Author: Nilesh Poddar <npoddar@codeaurora.org>
+Date:   Fri Feb 13 18:06:23 2015 -0800
+
+    cnd: Allow nims to be removed
+    
+    Allow access to nims path so that it
+    can be removed by cnd
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/device/qcom/sepolicy$ repo sync .
+remote: Counting objects: 17, done
+remote: Finding sources: 100% (12/12)
+remote: Total 12 (delta 8), reused 12 (delta 8)
+Unpacking objects: 100% (12/12), done.
+From ssh://192.168.180.185:29418/qct/goso/manifest
+   da7808e..b2ad3b2  msm8909    -> origin/msm8909
+   640d2f6..7853d50  msm8x74    -> origin/msm8x74
+project .repo/manifests/
+Updating 640d2f6..7853d50
+Fast-forward
+ msm8x74-2163-ebens.xml |  2 +-
+ msm8x74-4270.xml       | 38 --------------------------------------
+ 2 files changed, 1 insertion(+), 39 deletions(-)
+
+remote: Counting objects: 125, done
+remote: Finding sources: 100% (93/93)
+remote: Total 93 (delta 13), reused 18 (delta 13)
+Unpacking objects: 100% (93/93), done.
+From ssh://192.168.180.185:29418/qct/device/qcom/sepolicy
+ * [new branch]      msm8909-1235 -> caf/msm8909-1235
+   ce0c930..a61a4d5  msm8x74-4270 -> caf/msm8x74-4270
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/developers/demos
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/developers/docs
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/developers/samples/android
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/device/generic/arm64
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/device/generic/armv7-a-neon
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/device/generic/common
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/device/generic/goldfish
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/device/generic/qemu
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/device/generic/x86
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/device/generic/x86_64
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/device/google/accessory/arduino
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/device/google/accessory/demokit
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/device/qcom/msm8226
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/device/qcom/msm8610
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/device/sample
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/external/eclipse-basebuilder
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/external/eclipse-windowbuilder
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/hardware/akm
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/hardware/invensense
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/packages/apps/Calculator
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/packages/apps/Camera
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/packages/apps/Camera2
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/packages/apps/TvSettings
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/packages/inputmethods/OpenWnn
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/prebuilts/android-emulator
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/prebuilts/clang/darwin-x86/3.1
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/prebuilts/clang/darwin-x86/3.2
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/prebuilts/clang/darwin-x86/arm/3.3
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/prebuilts/clang/darwin-x86/host/3.4
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/prebuilts/clang/darwin-x86/host/3.5
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/prebuilts/clang/darwin-x86/mips/3.3
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/prebuilts/clang/darwin-x86/x86/3.3
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/prebuilts/clang/linux-x86/mips/3.3
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/prebuilts/eclipse
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.8
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/prebuilts/python/darwin-x86/2.7.5
+Deleting obsolete path /home/lcf/zgjwork/commsm/amss8974_402/LINUX/android/vendor/qcom/opensource/kernel-tests
+
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/device/qcom/sepolicy$ git log
+commit a61a4d505ef5bc1f675650ebc4732fc940f880a5
+Author: time repo sync -j2 -q <shanliangliang@gosomo.cn>
+Date:   Tue Jan 12 15:51:33 2016 +0800
+
+    Fixed: fix selinux warning which lead to pop voice,
+    
+        and it maybe lead to other unknow hiden problem
+    
+        http://192.168.180.176:3000/issues/6601
+    
+    Change-Id: Ie93e85d0c0e54c80c5ca4ffd8aa7d4ea21daf71e
+
+commit e38194ebf318d94ce9d80765b95add119e29d242
+Author: time repo sync -j2 -q <shanliangliang@gosomo.cn>
+Date:   Mon Jan 11 14:03:02 2016 +0800
+
+    enable surfaceflinger to access sysfs
+    
+    Change-Id: I423fb555964da6638e276347885d0f2234bb8ab1
+
+commit a10d080dad1d8c206b6196254c6cd3e4e43dcc3a
+Author: hamming <pm@gosomo.cn>
+Date:   Fri Jan 8 13:59:55 2016 +0800
+
+    Fixed:build break issue because of code merge.
+
+commit 5479c0f926e412ce506515884c4f78f163452034
+Author: hamming <donghm@gosomo.cn>
+Date:   Sat Aug 1 16:20:28 2015 +0800
+
+    Fixed:radio_prop set failed in init shell script.
+    
+    Change-Id: I7fd867b326609e675c29e4a5a0ea0da3a088cb9c
+
+commit cd506653d4f0e8db402077c401a894454e4a266b
+Author: wuqing <wuqing@gosomo.cn>
+Date:   Thu Jul 2 17:12:50 2015 +0800
+
+    Fixed:add permission of mm-pp-daemon for screen color.
+    
+    Change-Id: I1a9db2857fc8eb166308eaf9d037acd8693704e8
+
+commit 7e9a3cdf808ce3da5fd693958083b671222a6ad2
+Author: hamming <donghm@gosomo.cn>
+Date:   Mon Jun 8 18:43:07 2015 +0800
+
+    Fixed:system_app has not permission to access audio_device, which lead
+          to AudioLoopBack test failed.
+          http://192.168.180.176:3000/issues/5994
+    
+    Change-Id: I1fe71e58cee1fac1d3548472e126fb235af0259e
+
+commit 83ae15e693c7834ac891adac48b9a4b58f4fd6a8
+Author: ye ruiyong <yeruiyong@gosomo.cn>
+Date:   Wed May 27 19:08:03 2015 +0800
+
+    Allow system_server to operate sensors data file.
+    
+    Change-Id: I29a89f22174147ba58e35a73988f5aee3372e260
+
+commit 75a811714c10881c883fb4b0db52ef56906dd0ef
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed May 27 17:37:02 2015 +0800
+
+    Allow system_app do rw operation for sys/class/leds/lcd-backlight/brightness node.
+    
+    Change-Id: I74e3f2c71537a9be0ae775cc52382678e8230c0b
+
+commit 7a44adad06d51e0968a8dc96fc3007a404f47bc7
+Author: hamming <donghm@gosomo.cn>
+Date:   Sat May 23 18:11:24 2015 +0800
+
+    Fixed:Allow UsbPortSwith and qcom-sys-deamon permission to write
+          charger-screen enable/diable flag.
+    
+        http://192.168.180.176:3000/issues/5854
+    
+    Change-Id: Iaf8e505bf91c4a58835ad633101587c26db4a7c5
+
+commit 06921347ea19778c72e43d745a2ce1b1b9f13d89
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed May 20 15:56:13 2015 +0800
+
+    allow system_server to access sys/class/leds/rgb/brightness
+    
+    Change-Id: I118e13c713e07126921a78c8ad79cfc2cc767cdc
+
+commit ce0c930fcbb7c9b79aa11ea412cd26e8a55a1515
+Author: ye ruiyong <yeruiyong@gosomo.cn>
+Date:   Tue Oct 27 13:54:42 2015 +0800
+
+    Fixed:Allow to access sys led node.
+          http://192.168.180.176:3000/issues/6737
+    
+    Change-Id: I0322b15722b979093f96e42296e9b3c83524f37f
+
+commit d0df2661920d6073684d1ea5c685c56541f1bd30
+Author: kesun <kesun.zhou@gosomo.cn>
+Date:   Mon May 25 15:05:48 2015 +0800
+
+    Fixed: add rw_file_perms for mmi-test.
+    
+    Change-Id: If9147cd238767458ec6bf622c32d8f9ad9b1c90e
+
+commit b8d4e3f387761d106892a08daed2710f3fae092c
+Merge: f38bf4c 6975b30
+Author: Linux Build Service Account <lnxbuild@localhost>
+Date:   Sat Mar 21 23:14:53 2015 -0700
+
+    Merge AU_LINUX_ANDROID_LA.BF.1.1.1_RB1.05.01.00.042.025 on remote branch
+    
+    Change-Id: I9e00b5eda99e6a9bc6683f1136b4532415068d7a
+
+commit f38bf4cf6e466a4267a395f6d89b9db735d87916
+Merge: 0f19d1b 9f66f8a
+Author: Linux Build Service Account <lnxbuild@localhost>
+Date:   Fri Mar 20 14:01:12 2015 -0700
+
+    Merge "cnd: Allow nims to be removed"
+
+commit 6975b30ec52142fe68c43338f0d19afa290aef7d
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/device/qcom/sepolicy$ git log caf/msm8909-1138
+commit 18c26480c0973417167de31b7d39d840131eac7f
+Author: hamming <donghm@gosomo.cn>
+Date:   Sat Aug 1 16:20:28 2015 +0800
+
+    Fixed:radio_prop set failed in init shell script.
+    
+    Change-Id: I7fd867b326609e675c29e4a5a0ea0da3a088cb9c
+
+commit b9085b2a1347b5ba0cd20c02fb37d39d89c8c594
+Author: wuqing <wuqing@gosomo.cn>
+Date:   Thu Jul 2 17:12:50 2015 +0800
+
+    Fixed:add permission of mm-pp-daemon for screen color.
+    
+    Change-Id: I1a9db2857fc8eb166308eaf9d037acd8693704e8
+
+commit a47a44f84304adf3c2ce2a8b804b15cdc9517718
+Author: ye ruiyong <yeruiyong@gosomo.cn>
+Date:   Wed Jun 24 17:47:24 2015 +0800
+
+    Fixed:o2_gauge only define in V16 which will cause compile error
+          in other projects.
+    
+    Change-Id: I118e7e1fb7a0216387a028f477a19521d66a7f29
+
+commit 73d4eb059aff52faf3ce445f45e65cf0cf4e693e
+Author: hamming <donghm@gosomo.cn>
+Date:   Mon Jun 8 18:43:07 2015 +0800
+
+    Fixed:system_app has not permission to access audio_device, which lead
+          to AudioLoopBack test failed.
+          http://192.168.180.176:3000/issues/5994
+    
+    Change-Id: I1fe71e58cee1fac1d3548472e126fb235af0259e
+
+commit 479a4456a338530c276db1bfd9e1179b2a0adba3
+Author: ye ruiyong <yeruiyong@gosomo.cn>
+Date:   Wed May 27 19:08:03 2015 +0800
+
+    Allow system_server to operate sensors data file.
+    
+    Change-Id: I29a89f22174147ba58e35a73988f5aee3372e260
+
+commit 00351ec0549c3db3c71a5d0aea277b862ffc04ef
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed May 27 17:37:02 2015 +0800
+
+    Allow system_app do rw operation for sys/class/leds/lcd-backlight/brightness node.
+    
+    Change-Id: I74e3f2c71537a9be0ae775cc52382678e8230c0b
+
+commit aee779629b126e505051482708ea63c010f98823
+Author: hamming <donghm@gosomo.cn>
+Date:   Sat May 23 18:11:24 2015 +0800
+
+    Fixed:Allow UsbPortSwith and qcom-sys-deamon permission to write
+          charger-screen enable/diable flag.
+    
+        http://192.168.180.176:3000/issues/5854
+    
+    Change-Id: Iaf8e505bf91c4a58835ad633101587c26db4a7c5
+
+commit 1b3267cbba33986911c0c397a16c1e83c78f06b2
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Thu May 21 14:52:59 2015 +0800
+
+    Revert "Allow system_app do rw operation for sys/class/leds/rgb node."
+    
+    This reverts commit f7253958d750fcdde5fc95366c313095cc1d19ef.
+    
+    Change-Id: I6d0a45d615bae9f2ad05c6b17883f1700a5047cb
+
+commit bf8bd765f433c1d6390232bb342f7d2e1a0f437b
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Wed May 20 15:56:13 2015 +0800
+
+    allow system_server to access sys/class/leds/rgb/brightness
+    
+    Change-Id: I118e13c713e07126921a78c8ad79cfc2cc767cdc
+
+commit be8e344cf42bb45d1131a59182529d81d7959493
+Author: ye ruiyong <yeruiyong@gosomo.cn>
+Date:   Wed May 20 12:06:53 2015 +0800
+
+    1.Modify the Android.mk to prevent covert the customer's sepolicy.
+    2.Allow o2_gauge to access rfs_file.
+    
+    Change-Id: Ia1b0c09b2ec2a8be990b6f467e62a0579a7fcfa9
+
+commit 6fb5bd043d908f42776c5c821a82a4c8153f4427
+Author: shanll <shanliangliang@gosomo.cn>
+Date:   Tue May 19 20:13:04 2015 +0800
+
+    Allow system_app do rw operation for sys/class/leds/rgb node.
+    
+    Change-Id: I1431898328e09e5164e7bad6c945733399c9b593
+
+commit a11d60c889b0e4673faaffb1e58b596e61aea9c7
+Merge: 72cd7e8 62a0d1f
+Author: Linux Build Service Account <lnxbuild@localhost>
+Date:   Sun Aug 30 21:53:34 2015 -0700
+
+    Merge AU_LINUX_ANDROID_LA.BR.1.2.3_RB1.05.01.01.036.097 on remote branch
+    
+    Change-Id: Id93f3f104128c348184dfe30487a7dc580cbc42e
+
+commit 72cd7e8e5ce36d13a5d5816927f8396ac8d228db
+Merge: e5822a9 f061d1a
+Author: Linux Build Service Account <lnxbuild@localhost>
+Date:   Wed Aug 26 08:23:30 2015 -0700
+
+    Merge "sepolicy: add permissions for nq device"
+
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/device/qcom/sepolicy$ cd ../../
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/device$ cd ..
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android$ cd external/sepolicy/
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/external/sepolicy$ git log
+commit b21fed4520b8957bbe6e0f3dcf27dfcb7cf47c37
+Author: kaiyiz <kaiyiz@codeaurora.org>
+Date:   Thu Dec 11 10:27:26 2014 +0800
+
+    SystemUI: Fix no animation during power off device issue
+    
+    No permissions for system to operate bootanim.
+    
+    Add call and transfer permissions for bootanim and mediaserver.
+    Add permissions for system_server to operate bootanim.
+    
+    CRs-Fixed: 763988
+    
+    Change-Id: I5d92de38767cd61175b3e29319f60e0987cdf154
+
+commit 42d72733f5874aeb7958660f3b9ee1bd62ccbaf4
+Merge: 480840a 37e296f
+Author: Shreyas Narayan <shrena@codeaurora.org>
+Date:   Sun Mar 15 02:09:41 2015 +0530
+
+    Merge tag android-5.1.0_r1 into AOSP_5.1_MERGE
+    
+    Change-Id: I47b3abfa47007d12bb276f368634b6482a149fff
+
+commit 480840a3c57de9c3d2f0493d33086918de7ce844
+Merge: c2c29a5 ccd1373
+Author: Linux Build Service Account <lnxbuild@localhost>
+Date:   Sat Feb 14 06:35:06 2015 -0800
+
+    Merge "Revert "WFD : Adding policy exceptions in app domain for wfd""
+
+commit c2c29a5fba9f3f62d4b46b3ba696b43837ab86f1
+Merge: 18cadf5 a4c84b3
+Author: Linux Build Service Account <lnxbuild@localhost>
+Date:   Thu Feb 12 12:38:29 2015 -0800
+
+    Merge "Revert "Remove system user id from wfd_app""
+
+commit 37e296f19c9e69aa74df710ad7f0f58ce585bdcf
+Merge: 880be46 b2d5e0c
+Author: The Android Automerger <android-build@google.com>
+Date:   Mon Feb 9 06:09:27 2015 -0800
+
+    merge in lmp-mr1-release history after reset to lmp-mr1-dev
+
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/external/sepolicy$ repos ync .
+^C
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/external/sepolicy$ repo sync .
+remote: Counting objects: 94, done
+remote: Finding sources: 100% (77/77)
+remote: Total 77 (delta 33), reused 37 (delta 33)
+Unpacking objects: 100% (77/77), done.
+From ssh://192.168.180.185:29418/qct/platform/external/sepolicy
+ * [new branch]      msm8909-1235 -> caf/msm8909-1235
+   b21fed4..3921cd1  msm8x74-4270 -> caf/msm8x74-4270
+
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/external/sepolicy$ git log
+commit 3921cd1f0e02560288496a6ccbe3b1c440b004b8
+Author: 熊卫波 <xiongweibo@gosomo.cn>
+Date:   Fri Dec 4 19:25:07 2015 +0800
+
+    Fixed: allow recovery can create file in data/app/ dir
+    
+    Change-Id: Ib26720d7e8421f9e194def9d8ac21329d21db65f
+
+commit e5cc7750a26c3f8dee0017368b738cb875a72eb9
+Author: 熊卫波 <xiongweibo@gosomo.cn>
+Date:   Tue Dec 1 14:22:36 2015 +0800
+
+    Fixed:recovery cant read system/pre_install dir
+    
+    Change-Id: I2193697392f4f15b63f5a6d2c7ad49617303fef6
+
+commit d1df39153ce8890a60422b4b83c722af96bd87cb
+Author: 熊卫波 <xiongweibo@gosomo.cn>
+Date:   Fri Jun 12 11:55:19 2015 +0800
+
+    Fixed:Allow bluetooth and systemapp can read shell_data_file/bugreport files
+    
+    Change-Id: Ibb32bbef9cb52564cdf5ff3ec67120327c8b02c7
+
+commit cf530fc8499029b843d966e67b9e18f2af2b7406
+Author: hamming <donghm@gosomo.cn>
+Date:   Mon Jun 8 18:45:50 2015 +0800
+
+    Fixed:system_app has not permission to access audio_device, which lead
+          to AudioLoopBack test failed.
+          http://192.168.180.176:3000/issues/5994
+    
+    Change-Id: Ie4d7715b258786e63c195e06edd15a4bbac60365
+
+commit caad4fa82cb538f6f45f10813c6782fab8407e67
+Author: 熊卫波 <xiongweibo@gosomo.cn>
+Date:   Wed May 27 17:47:19 2015 +0800
+
+    Fixed: Add permission to read_write userdata files in recovery for support whitenamelist
+         http://192.168.180.176:3000/issues/5898
+    
+    Change-Id: I72a27dfe20df8ff6ab412c129b995d377ff873b3
+
+commit 8addad3b9ae2a3246d248df182ba0a0d139c9c8a
+Author: 熊卫波 <xiongweibo@gosomo.cn>
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/external/sepolicy$ git log
+commit 3921cd1f0e02560288496a6ccbe3b1c440b004b8
+Author: 熊卫波 <xiongweibo@gosomo.cn>
+Date:   Fri Dec 4 19:25:07 2015 +0800
+
+    Fixed: allow recovery can create file in data/app/ dir
+    
+    Change-Id: Ib26720d7e8421f9e194def9d8ac21329d21db65f
+
+commit e5cc7750a26c3f8dee0017368b738cb875a72eb9
+Author: 熊卫波 <xiongweibo@gosomo.cn>
+Date:   Tue Dec 1 14:22:36 2015 +0800
+
+    Fixed:recovery cant read system/pre_install dir
+    
+    Change-Id: I2193697392f4f15b63f5a6d2c7ad49617303fef6
+
+commit d1df39153ce8890a60422b4b83c722af96bd87cb
+Author: 熊卫波 <xiongweibo@gosomo.cn>
+Date:   Fri Jun 12 11:55:19 2015 +0800
+
+    Fixed:Allow bluetooth and systemapp can read shell_data_file/bugreport files
+    
+    Change-Id: Ibb32bbef9cb52564cdf5ff3ec67120327c8b02c7
+
+commit cf530fc8499029b843d966e67b9e18f2af2b7406
+Author: hamming <donghm@gosomo.cn>
+Date:   Mon Jun 8 18:45:50 2015 +0800
+
+    Fixed:system_app has not permission to access audio_device, which lead
+          to AudioLoopBack test failed.
+          http://192.168.180.176:3000/issues/5994
+    
+    Change-Id: Ie4d7715b258786e63c195e06edd15a4bbac60365
+
+commit caad4fa82cb538f6f45f10813c6782fab8407e67
+Author: 熊卫波 <xiongweibo@gosomo.cn>
+Date:   Wed May 27 17:47:19 2015 +0800
+
+    Fixed: Add permission to read_write userdata files in recovery for support whitenamelist
+         http://192.168.180.176:3000/issues/5898
+    
+    Change-Id: I72a27dfe20df8ff6ab412c129b995d377ff873b3
+
+commit 8addad3b9ae2a3246d248df182ba0a0d139c9c8a
+Author: 熊卫波 <xiongweibo@gosomo.cn>
+Date:   Tue May 26 19:41:04 2015 +0800
+
+    Fixed: Add permission to read_write userdata files in recovery for support whitenamelist
+         http://192.168.180.176:3000/issues/5898
+    Change-Id: I36a3a6eb3b15069954c06cd4cc5afdd5dc8f2469
+
+commit 3ff523397b50eb0f03e937fff99af59ffd441191
+Author: hamming <donghm@gosomo.cn>
+Date:   Tue May 26 18:42:50 2015 +0800
+
+    Remove appdomain blk_file read and write permission check for bootup
+    mode flag setting.
+    
+    Change-Id: Ie1a69b6722d249b102167d01249adff1bd9b2048
+
+commit 9cd6ec9e05a50a6f93eb4e289f2a9cdb1f117f5b
+Author: 熊卫波 <xiongweibo@gosomo.cn>
+Date:   Wed May 13 14:44:41 2015 +0800
+
+    Fixed: allow recovery to read external sdcard in Recovery mode
+    
+    Change-Id: Idde95c45094eefce5cdb00c0d153b5bfe6df9325
+
+commit ea260441aa886222f2896c77566fc9cba5413c54
+Author: hamming <donghm@gosomo.cn>
+Date:   Thu Mar 12 19:21:58 2015 +0800
+
+    Fixed:init process chmod /dev/block/mmc* failed, because of permission.
+    
+    Change-Id: I1f8b29667fd30efe515f7b2ff44eb1e5b8ef79fc
+
+commit 5c1fb72163838dce1cd4a09c12889155aa40ec01
+Author: ye ruiyong <yeruiyong@gosomo.cn>
+Date:   Wed Aug 26 15:41:52 2015 +0800
+lcf@lcfubuntu:~/zgjwork/commsm/amss8974_402/LINUX/android/external/sepolicy$ git show ea260441aa886222f2896c77566fc9cba5413c54
+commit ea260441aa886222f2896c77566fc9cba5413c54
+Author: hamming <donghm@gosomo.cn>
+Date:   Thu Mar 12 19:21:58 2015 +0800
+
+    Fixed:init process chmod /dev/block/mmc* failed, because of permission.
+    
+    Change-Id: I1f8b29667fd30efe515f7b2ff44eb1e5b8ef79fc
+
+diff --git a/init.te b/init.te
+index b5b7993..357fc57 100644
+--- a/init.te
++++ b/init.te
+@@ -13,7 +13,8 @@ allow init rootfs:file execute_no_trans;
+ allow init system_file:file execute_no_trans;
+ 
+ # Running e2fsck or mkswap via fs_mgr.
+-allow init dev_type:blk_file rw_file_perms;
++# allow init dev_type:blk_file rw_file_perms;
++allow init dev_type:blk_file { rw_file_perms setattr };
+ 
+ # Mounting filesystems.
+ # Only allow relabelto for types used in context= mount options,
+
